@@ -18,7 +18,7 @@
 // Simple Blas subset interface implementation.
 //
 //===----------------------------------------------------------------------===//
-
+#include "tensor_kernels.h"
 #include "include/cblas.h"
 #include <assert.h>
 
@@ -60,4 +60,23 @@ extern "C" void linalg_matmul_impl(ViewType<float, 2> *A, ViewType<float, 2> *B,
               A->sizes[1], 1.0f, A->data + A->offset, A->strides[0],
               B->data + B->offset, B->strides[0], 1.0f, C->data + C->offset,
               C->strides[0]);
+}
+
+extern "C" void linalg_blisukr_impl(ViewType<double, 2> * A, ViewType<double, 2> *B,
+                                     ViewType<double, 2> *C) {
+    //bli_dgemm_haswell_asm_6x8(use_k,  &alpha, Abuf+ A_pack_offset, Bbuf+B_pack_offset, &beta, C+ Ascatter[Im] + Bscatter[In], 1*C_range_c*C_range_d, 1, NULL, NULL);
+    //  need:  A , B, C, alpha = 1.0, beta = 1.0, row_stride_c, col_stride_c, use_k
+    printf("call linalg blisukr_impl\n");
+    int row_stride_c = C->sizes[0];
+    int col_stride_c = 1;
+    int A_offset = 0;
+    int B_offset = 0;
+    int C_offset = 0;
+    int use_k = 256;
+    double alpha = 1.0;
+    double beta = 1.0;
+    bli_dgemm_haswell_asm_6x8(use_k, &alpha, A + A_offset, B+B_offset, &beta, C+C_offset, row_stride_c, 1, NULL, NULL);
+
+    
+    
 }
