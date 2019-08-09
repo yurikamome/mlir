@@ -76,8 +76,8 @@ extern "C" void linalg_matmul_impl(ViewType<double, 2> * A, ViewType<double, 2> 
     double alpha = 1.0;
     double beta = 1.0;
 //    bli_dgemm_haswell_asm_6x8(use_k, &alpha, A + A_offset, B+B_offset, &beta, C+C_offset, row_stride_c, 1, NULL, NULL);
-    blis_ukr(use_k, alpha, beta, A, B, C, row_stride_c, col_stride_c);
-
+//    blisukr(use_k, alpha, beta, A->data, B->data, C->data, row_stride_c, col_stride_c);
+    blisukr();
     
     
 }
