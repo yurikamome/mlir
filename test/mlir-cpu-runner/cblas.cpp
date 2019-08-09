@@ -54,3 +54,7 @@ extern "C" void cblas_sgemm(const enum CBLAS_ORDER Order,
     }
   }
 }
+
+// extern "C" inline void blisukr(int k, double alpha, double beta,  double* A, double*B, double*C, int rs, int cs){
+//     bli_dgemm_haswell_asm_6x8(use_k, &alpha, A, B, &beta, C, rs, cs, NULL, NULL);
+// }
