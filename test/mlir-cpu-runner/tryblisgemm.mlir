@@ -1,4 +1,4 @@
-func @packA(%oribuf : !linalg.view<?x?x?x?x?x?x?xf64>){
+func @packA(%oribuf : !linalg.view<?x?x?x?x?x?x?xf64>) -> !linalg.view<?x?x?x?x?x?x?xf64>{
      %c768 = constant 768 : index
 
      %Tm0 = constant 6 : index
@@ -67,7 +67,7 @@ func @packA(%oribuf : !linalg.view<?x?x?x?x?x?x?xf64>){
 return %outview : !linalg.view<?x?x?x?x?x?x?xf64>
 }
 
-func @packB(%oribuf : !linalg.view<?x?x?x?x?x?x?xf64>){
+func @packB(%oribuf : !linalg.view<?x?x?x?x?x?x?xf64>) ->!linalg.view<?x?x?x?x?x?x?xf64>{
      %c768 = constant 768 : index
 
      %Tm0 = constant 6 : index
@@ -219,7 +219,7 @@ func @tilegemm(%argA: !linalg.buffer<589824xf64>,
 
      loop.for %lpk4 = %c0 to %Rgk4 step %c1 {
      loop.for %lpn4 = %c0 to %Rgn4 step %c1 {
-     %Bori_L3 = linalg.slice %Bori[%lpj4, %j3, %j2, %j1, %j0, %lpk4, %k3 ,%k2, %k1] : !linalg.view<?x?x?x?x?x?x?x?x?xf64>, index, !linalg.range, !linalg.range, !linalg.range, !linalg.range, index, !linalg.range, !linalg.range, !linalg.range, !linalg.view<?x?x?x?x?x?x?xf64>
+     %Bori_L3 = linalg.slice %Bori[%lpn4, %j3, %j2, %j1, %j0, %lpk4, %k3 ,%k2, %k1] : !linalg.view<?x?x?x?x?x?x?x?x?xf64>, index, !linalg.range, !linalg.range, !linalg.range, !linalg.range, index, !linalg.range, !linalg.range, !linalg.range, !linalg.view<?x?x?x?x?x?x?xf64>
      %Bbuf_L3 = call @packB(%Bori_L3) : (!linalg.view<?x?x?x?x?x?x?xf64>) -> (!linalg.view<?x?x?x?x?x?x?xf64>)
      
      loop.for %lpm4 = %c0 to %Rgm4 step %c1 {
