@@ -1,0 +1,1426 @@
+
+
+module {
+  func @debugs() {
+    llvm.return
+  }
+  func @packA(%arg0: !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">) -> !llvm<"{ double*, i64, [7 x i64], [7 x i64] }"> {
+    %0 = llvm.constant(0 : index) : !llvm.i64
+    %1 = llvm.constant(1 : index) : !llvm.i64
+    %2 = llvm.constant(768 : index) : !llvm.i64
+    %3 = llvm.constant(6 : index) : !llvm.i64
+    %4 = llvm.constant(8 : index) : !llvm.i64
+    %5 = llvm.constant(256 : index) : !llvm.i64
+    %6 = llvm.constant(6 : index) : !llvm.i64
+    %7 = llvm.constant(8 : index) : !llvm.i64
+    %8 = llvm.constant(256 : index) : !llvm.i64
+    %9 = llvm.constant(96 : index) : !llvm.i64
+    %10 = llvm.constant(8 : index) : !llvm.i64
+    %11 = llvm.constant(256 : index) : !llvm.i64
+    %12 = llvm.constant(96 : index) : !llvm.i64
+    %13 = llvm.constant(768 : index) : !llvm.i64
+    %14 = llvm.constant(1 : index) : !llvm.i64
+    %15 = llvm.constant(0 : index) : !llvm.i64
+    %16 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %17 = llvm.insertvalue %15, %16[0] : !llvm<"{ i64, i64, i64 }">
+    %18 = llvm.insertvalue %3, %17[1] : !llvm<"{ i64, i64, i64 }">
+    %19 = llvm.insertvalue %14, %18[2] : !llvm<"{ i64, i64, i64 }">
+    %20 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %21 = llvm.insertvalue %15, %20[0] : !llvm<"{ i64, i64, i64 }">
+    %22 = llvm.insertvalue %4, %21[1] : !llvm<"{ i64, i64, i64 }">
+    %23 = llvm.insertvalue %14, %22[2] : !llvm<"{ i64, i64, i64 }">
+    %24 = llvm.sdiv %6, %3 : !llvm.i64
+    %25 = llvm.sdiv %7, %4 : !llvm.i64
+    %26 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %27 = llvm.insertvalue %15, %26[0] : !llvm<"{ i64, i64, i64 }">
+    %28 = llvm.insertvalue %5, %27[1] : !llvm<"{ i64, i64, i64 }">
+    %29 = llvm.insertvalue %14, %28[2] : !llvm<"{ i64, i64, i64 }">
+    %30 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %31 = llvm.insertvalue %15, %30[0] : !llvm<"{ i64, i64, i64 }">
+    %32 = llvm.insertvalue %24, %31[1] : !llvm<"{ i64, i64, i64 }">
+    %33 = llvm.insertvalue %14, %32[2] : !llvm<"{ i64, i64, i64 }">
+    %34 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %35 = llvm.insertvalue %15, %34[0] : !llvm<"{ i64, i64, i64 }">
+    %36 = llvm.insertvalue %25, %35[1] : !llvm<"{ i64, i64, i64 }">
+    %37 = llvm.insertvalue %14, %36[2] : !llvm<"{ i64, i64, i64 }">
+    %38 = llvm.sdiv %8, %5 : !llvm.i64
+    %39 = llvm.sdiv %9, %6 : !llvm.i64
+    %40 = llvm.sdiv %10, %7 : !llvm.i64
+    %41 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %42 = llvm.insertvalue %15, %41[0] : !llvm<"{ i64, i64, i64 }">
+    %43 = llvm.insertvalue %38, %42[1] : !llvm<"{ i64, i64, i64 }">
+    %44 = llvm.insertvalue %14, %43[2] : !llvm<"{ i64, i64, i64 }">
+    %45 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %46 = llvm.insertvalue %15, %45[0] : !llvm<"{ i64, i64, i64 }">
+    %47 = llvm.insertvalue %39, %46[1] : !llvm<"{ i64, i64, i64 }">
+    %48 = llvm.insertvalue %14, %47[2] : !llvm<"{ i64, i64, i64 }">
+    %49 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %50 = llvm.insertvalue %15, %49[0] : !llvm<"{ i64, i64, i64 }">
+    %51 = llvm.insertvalue %40, %50[1] : !llvm<"{ i64, i64, i64 }">
+    %52 = llvm.insertvalue %14, %51[2] : !llvm<"{ i64, i64, i64 }">
+    %53 = llvm.sdiv %11, %8 : !llvm.i64
+    %54 = llvm.sdiv %12, %9 : !llvm.i64
+    %55 = llvm.sdiv %13, %10 : !llvm.i64
+    %56 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %57 = llvm.insertvalue %15, %56[0] : !llvm<"{ i64, i64, i64 }">
+    %58 = llvm.insertvalue %53, %57[1] : !llvm<"{ i64, i64, i64 }">
+    %59 = llvm.insertvalue %14, %58[2] : !llvm<"{ i64, i64, i64 }">
+    %60 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %61 = llvm.insertvalue %15, %60[0] : !llvm<"{ i64, i64, i64 }">
+    %62 = llvm.insertvalue %54, %61[1] : !llvm<"{ i64, i64, i64 }">
+    %63 = llvm.insertvalue %14, %62[2] : !llvm<"{ i64, i64, i64 }">
+    %64 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %65 = llvm.insertvalue %15, %64[0] : !llvm<"{ i64, i64, i64 }">
+    %66 = llvm.insertvalue %55, %65[1] : !llvm<"{ i64, i64, i64 }">
+    %67 = llvm.insertvalue %14, %66[2] : !llvm<"{ i64, i64, i64 }">
+    %68 = llvm.sdiv %2, %11 : !llvm.i64
+    %69 = llvm.sdiv %2, %12 : !llvm.i64
+    %70 = llvm.sdiv %2, %13 : !llvm.i64
+    %71 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %72 = llvm.insertvalue %15, %71[0] : !llvm<"{ i64, i64, i64 }">
+    %73 = llvm.insertvalue %68, %72[1] : !llvm<"{ i64, i64, i64 }">
+    %74 = llvm.insertvalue %14, %73[2] : !llvm<"{ i64, i64, i64 }">
+    %75 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %76 = llvm.insertvalue %15, %75[0] : !llvm<"{ i64, i64, i64 }">
+    %77 = llvm.insertvalue %69, %76[1] : !llvm<"{ i64, i64, i64 }">
+    %78 = llvm.insertvalue %14, %77[2] : !llvm<"{ i64, i64, i64 }">
+    %79 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %80 = llvm.insertvalue %15, %79[0] : !llvm<"{ i64, i64, i64 }">
+    %81 = llvm.insertvalue %70, %80[1] : !llvm<"{ i64, i64, i64 }">
+    %82 = llvm.insertvalue %14, %81[2] : !llvm<"{ i64, i64, i64 }">
+    %83 = llvm.constant(24576 : index) : !llvm.i64
+    %84 = llvm.constant(8 : index) : !llvm.i64
+    %85 = llvm.mul %83, %84 : !llvm.i64
+    %86 = llvm.call @malloc(%85) : (!llvm.i64) -> !llvm<"i8*">
+    %87 = llvm.bitcast %86 : !llvm<"i8*"> to !llvm<"double*">
+    %88 = llvm.undef : !llvm<"{ double*, i64 }">
+    %89 = llvm.insertvalue %87, %88[0] : !llvm<"{ double*, i64 }">
+    %90 = llvm.insertvalue %83, %89[1] : !llvm<"{ double*, i64 }">
+    %91 = llvm.undef : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %92 = llvm.extractvalue %90[0] : !llvm<"{ double*, i64 }">
+    %93 = llvm.insertvalue %92, %91[0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %94 = llvm.constant(0 : index) : !llvm.i64
+    %95 = llvm.insertvalue %94, %93[1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %96 = llvm.constant(1 : index) : !llvm.i64
+    %97 = llvm.extractvalue %29[2] : !llvm<"{ i64, i64, i64 }">
+    %98 = llvm.mul %96, %97 : !llvm.i64
+    %99 = llvm.insertvalue %98, %95[3, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %100 = llvm.extractvalue %29[0] : !llvm<"{ i64, i64, i64 }">
+    %101 = llvm.extractvalue %29[1] : !llvm<"{ i64, i64, i64 }">
+    %102 = llvm.sub %101, %100 : !llvm.i64
+    %103 = llvm.insertvalue %102, %99[2, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %104 = llvm.mul %96, %101 : !llvm.i64
+    %105 = llvm.extractvalue %44[2] : !llvm<"{ i64, i64, i64 }">
+    %106 = llvm.mul %104, %105 : !llvm.i64
+    %107 = llvm.insertvalue %106, %103[3, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %108 = llvm.extractvalue %44[0] : !llvm<"{ i64, i64, i64 }">
+    %109 = llvm.extractvalue %44[1] : !llvm<"{ i64, i64, i64 }">
+    %110 = llvm.sub %109, %108 : !llvm.i64
+    %111 = llvm.insertvalue %110, %107[2, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %112 = llvm.mul %104, %109 : !llvm.i64
+    %113 = llvm.extractvalue %59[2] : !llvm<"{ i64, i64, i64 }">
+    %114 = llvm.mul %112, %113 : !llvm.i64
+    %115 = llvm.insertvalue %114, %111[3, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %116 = llvm.extractvalue %59[0] : !llvm<"{ i64, i64, i64 }">
+    %117 = llvm.extractvalue %59[1] : !llvm<"{ i64, i64, i64 }">
+    %118 = llvm.sub %117, %116 : !llvm.i64
+    %119 = llvm.insertvalue %118, %115[2, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %120 = llvm.mul %112, %117 : !llvm.i64
+    %121 = llvm.extractvalue %19[2] : !llvm<"{ i64, i64, i64 }">
+    %122 = llvm.mul %120, %121 : !llvm.i64
+    %123 = llvm.insertvalue %122, %119[3, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %124 = llvm.extractvalue %19[0] : !llvm<"{ i64, i64, i64 }">
+    %125 = llvm.extractvalue %19[1] : !llvm<"{ i64, i64, i64 }">
+    %126 = llvm.sub %125, %124 : !llvm.i64
+    %127 = llvm.insertvalue %126, %123[2, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %128 = llvm.mul %120, %125 : !llvm.i64
+    %129 = llvm.extractvalue %33[2] : !llvm<"{ i64, i64, i64 }">
+    %130 = llvm.mul %128, %129 : !llvm.i64
+    %131 = llvm.insertvalue %130, %127[3, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %132 = llvm.extractvalue %33[0] : !llvm<"{ i64, i64, i64 }">
+    %133 = llvm.extractvalue %33[1] : !llvm<"{ i64, i64, i64 }">
+    %134 = llvm.sub %133, %132 : !llvm.i64
+    %135 = llvm.insertvalue %134, %131[2, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %136 = llvm.mul %128, %133 : !llvm.i64
+    %137 = llvm.extractvalue %48[2] : !llvm<"{ i64, i64, i64 }">
+    %138 = llvm.mul %136, %137 : !llvm.i64
+    %139 = llvm.insertvalue %138, %135[3, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %140 = llvm.extractvalue %48[0] : !llvm<"{ i64, i64, i64 }">
+    %141 = llvm.extractvalue %48[1] : !llvm<"{ i64, i64, i64 }">
+    %142 = llvm.sub %141, %140 : !llvm.i64
+    %143 = llvm.insertvalue %142, %139[2, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %144 = llvm.mul %136, %141 : !llvm.i64
+    %145 = llvm.extractvalue %63[2] : !llvm<"{ i64, i64, i64 }">
+    %146 = llvm.mul %144, %145 : !llvm.i64
+    %147 = llvm.insertvalue %146, %143[3, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %148 = llvm.extractvalue %63[0] : !llvm<"{ i64, i64, i64 }">
+    %149 = llvm.extractvalue %63[1] : !llvm<"{ i64, i64, i64 }">
+    %150 = llvm.sub %149, %148 : !llvm.i64
+    %151 = llvm.insertvalue %150, %147[2, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %152 = llvm.extractvalue %arg0[2, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %153 = llvm.extractvalue %arg0[2, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %154 = llvm.extractvalue %arg0[2, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %155 = llvm.extractvalue %arg0[2, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %156 = llvm.extractvalue %arg0[2, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %157 = llvm.extractvalue %arg0[2, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %158 = llvm.extractvalue %arg0[2, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %159 = llvm.extractvalue %151[2, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %160 = llvm.extractvalue %151[2, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %161 = llvm.extractvalue %151[2, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %162 = llvm.extractvalue %151[2, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %163 = llvm.extractvalue %151[2, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %164 = llvm.extractvalue %151[2, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %165 = llvm.extractvalue %151[2, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %166 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %167 = llvm.insertvalue %0, %166[0] : !llvm<"{ i64, i64, i64 }">
+    %168 = llvm.insertvalue %152, %167[1] : !llvm<"{ i64, i64, i64 }">
+    %169 = llvm.insertvalue %1, %168[2] : !llvm<"{ i64, i64, i64 }">
+    %170 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %171 = llvm.insertvalue %0, %170[0] : !llvm<"{ i64, i64, i64 }">
+    %172 = llvm.insertvalue %153, %171[1] : !llvm<"{ i64, i64, i64 }">
+    %173 = llvm.insertvalue %1, %172[2] : !llvm<"{ i64, i64, i64 }">
+    %174 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %175 = llvm.insertvalue %0, %174[0] : !llvm<"{ i64, i64, i64 }">
+    %176 = llvm.insertvalue %154, %175[1] : !llvm<"{ i64, i64, i64 }">
+    %177 = llvm.insertvalue %1, %176[2] : !llvm<"{ i64, i64, i64 }">
+    %178 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %179 = llvm.insertvalue %0, %178[0] : !llvm<"{ i64, i64, i64 }">
+    %180 = llvm.insertvalue %155, %179[1] : !llvm<"{ i64, i64, i64 }">
+    %181 = llvm.insertvalue %1, %180[2] : !llvm<"{ i64, i64, i64 }">
+    %182 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %183 = llvm.insertvalue %0, %182[0] : !llvm<"{ i64, i64, i64 }">
+    %184 = llvm.insertvalue %156, %183[1] : !llvm<"{ i64, i64, i64 }">
+    %185 = llvm.insertvalue %1, %184[2] : !llvm<"{ i64, i64, i64 }">
+    %186 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %187 = llvm.insertvalue %0, %186[0] : !llvm<"{ i64, i64, i64 }">
+    %188 = llvm.insertvalue %157, %187[1] : !llvm<"{ i64, i64, i64 }">
+    %189 = llvm.insertvalue %1, %188[2] : !llvm<"{ i64, i64, i64 }">
+    %190 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %191 = llvm.insertvalue %0, %190[0] : !llvm<"{ i64, i64, i64 }">
+    %192 = llvm.insertvalue %158, %191[1] : !llvm<"{ i64, i64, i64 }">
+    %193 = llvm.insertvalue %1, %192[2] : !llvm<"{ i64, i64, i64 }">
+    llvm.br ^bb1(%0 : !llvm.i64)
+  ^bb1(%194: !llvm.i64):	// 2 preds: ^bb0, ^bb20
+    %195 = llvm.icmp "slt" %194, %152 : !llvm.i64
+    llvm.cond_br %195, ^bb2, ^bb21
+  ^bb2:	// pred: ^bb1
+    llvm.br ^bb3(%0 : !llvm.i64)
+  ^bb3(%196: !llvm.i64):	// 2 preds: ^bb2, ^bb19
+    %197 = llvm.icmp "slt" %196, %153 : !llvm.i64
+    llvm.cond_br %197, ^bb4, ^bb20
+  ^bb4:	// pred: ^bb3
+    llvm.br ^bb5(%0 : !llvm.i64)
+  ^bb5(%198: !llvm.i64):	// 2 preds: ^bb4, ^bb18
+    %199 = llvm.icmp "slt" %198, %154 : !llvm.i64
+    llvm.cond_br %199, ^bb6, ^bb19
+  ^bb6:	// pred: ^bb5
+    llvm.br ^bb7(%0 : !llvm.i64)
+  ^bb7(%200: !llvm.i64):	// 2 preds: ^bb6, ^bb17
+    %201 = llvm.icmp "slt" %200, %155 : !llvm.i64
+    llvm.cond_br %201, ^bb8, ^bb18
+  ^bb8:	// pred: ^bb7
+    llvm.br ^bb9(%0 : !llvm.i64)
+  ^bb9(%202: !llvm.i64):	// 2 preds: ^bb8, ^bb16
+    %203 = llvm.icmp "slt" %202, %156 : !llvm.i64
+    llvm.cond_br %203, ^bb10, ^bb17
+  ^bb10:	// pred: ^bb9
+    llvm.br ^bb11(%0 : !llvm.i64)
+  ^bb11(%204: !llvm.i64):	// 2 preds: ^bb10, ^bb15
+    %205 = llvm.icmp "slt" %204, %157 : !llvm.i64
+    llvm.cond_br %205, ^bb12, ^bb16
+  ^bb12:	// pred: ^bb11
+    llvm.br ^bb13(%0 : !llvm.i64)
+  ^bb13(%206: !llvm.i64):	// 2 preds: ^bb12, ^bb14
+    %207 = llvm.icmp "slt" %206, %158 : !llvm.i64
+    llvm.cond_br %207, ^bb14, ^bb15
+  ^bb14:	// pred: ^bb13
+    %208 = llvm.extractvalue %arg0[0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %209 = llvm.extractvalue %arg0[1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %210 = llvm.extractvalue %arg0[3, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %211 = llvm.mul %194, %210 : !llvm.i64
+    %212 = llvm.add %209, %211 : !llvm.i64
+    %213 = llvm.extractvalue %arg0[3, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %214 = llvm.mul %196, %213 : !llvm.i64
+    %215 = llvm.add %212, %214 : !llvm.i64
+    %216 = llvm.extractvalue %arg0[3, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %217 = llvm.mul %198, %216 : !llvm.i64
+    %218 = llvm.add %215, %217 : !llvm.i64
+    %219 = llvm.extractvalue %arg0[3, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %220 = llvm.mul %200, %219 : !llvm.i64
+    %221 = llvm.add %218, %220 : !llvm.i64
+    %222 = llvm.extractvalue %arg0[3, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %223 = llvm.mul %202, %222 : !llvm.i64
+    %224 = llvm.add %221, %223 : !llvm.i64
+    %225 = llvm.extractvalue %arg0[3, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %226 = llvm.mul %204, %225 : !llvm.i64
+    %227 = llvm.add %224, %226 : !llvm.i64
+    %228 = llvm.extractvalue %arg0[3, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %229 = llvm.mul %206, %228 : !llvm.i64
+    %230 = llvm.add %227, %229 : !llvm.i64
+    %231 = llvm.getelementptr %208[%230] : (!llvm<"double*">, !llvm.i64) -> !llvm<"double*">
+    %232 = llvm.load %231 : !llvm<"double*">
+    %233 = llvm.extractvalue %151[0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %234 = llvm.extractvalue %151[1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %235 = llvm.extractvalue %151[3, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %236 = llvm.mul %202, %235 : !llvm.i64
+    %237 = llvm.add %234, %236 : !llvm.i64
+    %238 = llvm.extractvalue %151[3, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %239 = llvm.mul %194, %238 : !llvm.i64
+    %240 = llvm.add %237, %239 : !llvm.i64
+    %241 = llvm.extractvalue %151[3, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %242 = llvm.mul %204, %241 : !llvm.i64
+    %243 = llvm.add %240, %242 : !llvm.i64
+    %244 = llvm.extractvalue %151[3, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %245 = llvm.mul %196, %244 : !llvm.i64
+    %246 = llvm.add %243, %245 : !llvm.i64
+    %247 = llvm.extractvalue %151[3, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %248 = llvm.mul %198, %247 : !llvm.i64
+    %249 = llvm.add %246, %248 : !llvm.i64
+    %250 = llvm.extractvalue %151[3, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %251 = llvm.mul %206, %250 : !llvm.i64
+    %252 = llvm.add %249, %251 : !llvm.i64
+    %253 = llvm.extractvalue %151[3, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %254 = llvm.mul %200, %253 : !llvm.i64
+    %255 = llvm.add %252, %254 : !llvm.i64
+    %256 = llvm.getelementptr %233[%255] : (!llvm<"double*">, !llvm.i64) -> !llvm<"double*">
+    llvm.store %232, %256 : !llvm<"double*">
+    %257 = llvm.add %206, %1 : !llvm.i64
+    llvm.br ^bb13(%257 : !llvm.i64)
+  ^bb15:	// pred: ^bb13
+    %258 = llvm.add %204, %1 : !llvm.i64
+    llvm.br ^bb11(%258 : !llvm.i64)
+  ^bb16:	// pred: ^bb11
+    %259 = llvm.add %202, %1 : !llvm.i64
+    llvm.br ^bb9(%259 : !llvm.i64)
+  ^bb17:	// pred: ^bb9
+    %260 = llvm.add %200, %1 : !llvm.i64
+    llvm.br ^bb7(%260 : !llvm.i64)
+  ^bb18:	// pred: ^bb7
+    %261 = llvm.add %198, %1 : !llvm.i64
+    llvm.br ^bb5(%261 : !llvm.i64)
+  ^bb19:	// pred: ^bb5
+    %262 = llvm.add %196, %1 : !llvm.i64
+    llvm.br ^bb3(%262 : !llvm.i64)
+  ^bb20:	// pred: ^bb3
+    %263 = llvm.add %194, %1 : !llvm.i64
+    llvm.br ^bb1(%263 : !llvm.i64)
+  ^bb21:	// pred: ^bb1
+    llvm.return %151 : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+  }
+  func @packB(%arg0: !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">) -> !llvm<"{ double*, i64, [7 x i64], [7 x i64] }"> {
+    %0 = llvm.constant(0 : index) : !llvm.i64
+    %1 = llvm.constant(1 : index) : !llvm.i64
+    %2 = llvm.constant(768 : index) : !llvm.i64
+    %3 = llvm.constant(6 : index) : !llvm.i64
+    %4 = llvm.constant(8 : index) : !llvm.i64
+    %5 = llvm.constant(256 : index) : !llvm.i64
+    %6 = llvm.constant(6 : index) : !llvm.i64
+    %7 = llvm.constant(8 : index) : !llvm.i64
+    %8 = llvm.constant(256 : index) : !llvm.i64
+    %9 = llvm.constant(96 : index) : !llvm.i64
+    %10 = llvm.constant(8 : index) : !llvm.i64
+    %11 = llvm.constant(256 : index) : !llvm.i64
+    %12 = llvm.constant(96 : index) : !llvm.i64
+    %13 = llvm.constant(768 : index) : !llvm.i64
+    %14 = llvm.constant(1 : index) : !llvm.i64
+    %15 = llvm.constant(0 : index) : !llvm.i64
+    %16 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %17 = llvm.insertvalue %15, %16[0] : !llvm<"{ i64, i64, i64 }">
+    %18 = llvm.insertvalue %3, %17[1] : !llvm<"{ i64, i64, i64 }">
+    %19 = llvm.insertvalue %14, %18[2] : !llvm<"{ i64, i64, i64 }">
+    %20 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %21 = llvm.insertvalue %15, %20[0] : !llvm<"{ i64, i64, i64 }">
+    %22 = llvm.insertvalue %4, %21[1] : !llvm<"{ i64, i64, i64 }">
+    %23 = llvm.insertvalue %14, %22[2] : !llvm<"{ i64, i64, i64 }">
+    %24 = llvm.sdiv %6, %3 : !llvm.i64
+    %25 = llvm.sdiv %7, %4 : !llvm.i64
+    %26 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %27 = llvm.insertvalue %15, %26[0] : !llvm<"{ i64, i64, i64 }">
+    %28 = llvm.insertvalue %5, %27[1] : !llvm<"{ i64, i64, i64 }">
+    %29 = llvm.insertvalue %14, %28[2] : !llvm<"{ i64, i64, i64 }">
+    %30 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %31 = llvm.insertvalue %15, %30[0] : !llvm<"{ i64, i64, i64 }">
+    %32 = llvm.insertvalue %24, %31[1] : !llvm<"{ i64, i64, i64 }">
+    %33 = llvm.insertvalue %14, %32[2] : !llvm<"{ i64, i64, i64 }">
+    %34 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %35 = llvm.insertvalue %15, %34[0] : !llvm<"{ i64, i64, i64 }">
+    %36 = llvm.insertvalue %25, %35[1] : !llvm<"{ i64, i64, i64 }">
+    %37 = llvm.insertvalue %14, %36[2] : !llvm<"{ i64, i64, i64 }">
+    %38 = llvm.sdiv %8, %5 : !llvm.i64
+    %39 = llvm.sdiv %9, %6 : !llvm.i64
+    %40 = llvm.sdiv %10, %7 : !llvm.i64
+    %41 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %42 = llvm.insertvalue %15, %41[0] : !llvm<"{ i64, i64, i64 }">
+    %43 = llvm.insertvalue %38, %42[1] : !llvm<"{ i64, i64, i64 }">
+    %44 = llvm.insertvalue %14, %43[2] : !llvm<"{ i64, i64, i64 }">
+    %45 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %46 = llvm.insertvalue %15, %45[0] : !llvm<"{ i64, i64, i64 }">
+    %47 = llvm.insertvalue %39, %46[1] : !llvm<"{ i64, i64, i64 }">
+    %48 = llvm.insertvalue %14, %47[2] : !llvm<"{ i64, i64, i64 }">
+    %49 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %50 = llvm.insertvalue %15, %49[0] : !llvm<"{ i64, i64, i64 }">
+    %51 = llvm.insertvalue %40, %50[1] : !llvm<"{ i64, i64, i64 }">
+    %52 = llvm.insertvalue %14, %51[2] : !llvm<"{ i64, i64, i64 }">
+    %53 = llvm.sdiv %11, %8 : !llvm.i64
+    %54 = llvm.sdiv %12, %9 : !llvm.i64
+    %55 = llvm.sdiv %13, %10 : !llvm.i64
+    %56 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %57 = llvm.insertvalue %15, %56[0] : !llvm<"{ i64, i64, i64 }">
+    %58 = llvm.insertvalue %53, %57[1] : !llvm<"{ i64, i64, i64 }">
+    %59 = llvm.insertvalue %14, %58[2] : !llvm<"{ i64, i64, i64 }">
+    %60 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %61 = llvm.insertvalue %15, %60[0] : !llvm<"{ i64, i64, i64 }">
+    %62 = llvm.insertvalue %54, %61[1] : !llvm<"{ i64, i64, i64 }">
+    %63 = llvm.insertvalue %14, %62[2] : !llvm<"{ i64, i64, i64 }">
+    %64 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %65 = llvm.insertvalue %15, %64[0] : !llvm<"{ i64, i64, i64 }">
+    %66 = llvm.insertvalue %55, %65[1] : !llvm<"{ i64, i64, i64 }">
+    %67 = llvm.insertvalue %14, %66[2] : !llvm<"{ i64, i64, i64 }">
+    %68 = llvm.sdiv %2, %11 : !llvm.i64
+    %69 = llvm.sdiv %2, %12 : !llvm.i64
+    %70 = llvm.sdiv %2, %13 : !llvm.i64
+    %71 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %72 = llvm.insertvalue %15, %71[0] : !llvm<"{ i64, i64, i64 }">
+    %73 = llvm.insertvalue %68, %72[1] : !llvm<"{ i64, i64, i64 }">
+    %74 = llvm.insertvalue %14, %73[2] : !llvm<"{ i64, i64, i64 }">
+    %75 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %76 = llvm.insertvalue %15, %75[0] : !llvm<"{ i64, i64, i64 }">
+    %77 = llvm.insertvalue %69, %76[1] : !llvm<"{ i64, i64, i64 }">
+    %78 = llvm.insertvalue %14, %77[2] : !llvm<"{ i64, i64, i64 }">
+    %79 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %80 = llvm.insertvalue %15, %79[0] : !llvm<"{ i64, i64, i64 }">
+    %81 = llvm.insertvalue %70, %80[1] : !llvm<"{ i64, i64, i64 }">
+    %82 = llvm.insertvalue %14, %81[2] : !llvm<"{ i64, i64, i64 }">
+    %83 = llvm.constant(196608 : index) : !llvm.i64
+    %84 = llvm.constant(8 : index) : !llvm.i64
+    %85 = llvm.mul %83, %84 : !llvm.i64
+    %86 = llvm.call @malloc(%85) : (!llvm.i64) -> !llvm<"i8*">
+    %87 = llvm.bitcast %86 : !llvm<"i8*"> to !llvm<"double*">
+    %88 = llvm.undef : !llvm<"{ double*, i64 }">
+    %89 = llvm.insertvalue %87, %88[0] : !llvm<"{ double*, i64 }">
+    %90 = llvm.insertvalue %83, %89[1] : !llvm<"{ double*, i64 }">
+    %91 = llvm.undef : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %92 = llvm.extractvalue %90[0] : !llvm<"{ double*, i64 }">
+    %93 = llvm.insertvalue %92, %91[0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %94 = llvm.constant(0 : index) : !llvm.i64
+    %95 = llvm.insertvalue %94, %93[1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %96 = llvm.constant(1 : index) : !llvm.i64
+    %97 = llvm.extractvalue %29[2] : !llvm<"{ i64, i64, i64 }">
+    %98 = llvm.mul %96, %97 : !llvm.i64
+    %99 = llvm.insertvalue %98, %95[3, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %100 = llvm.extractvalue %29[0] : !llvm<"{ i64, i64, i64 }">
+    %101 = llvm.extractvalue %29[1] : !llvm<"{ i64, i64, i64 }">
+    %102 = llvm.sub %101, %100 : !llvm.i64
+    %103 = llvm.insertvalue %102, %99[2, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %104 = llvm.mul %96, %101 : !llvm.i64
+    %105 = llvm.extractvalue %44[2] : !llvm<"{ i64, i64, i64 }">
+    %106 = llvm.mul %104, %105 : !llvm.i64
+    %107 = llvm.insertvalue %106, %103[3, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %108 = llvm.extractvalue %44[0] : !llvm<"{ i64, i64, i64 }">
+    %109 = llvm.extractvalue %44[1] : !llvm<"{ i64, i64, i64 }">
+    %110 = llvm.sub %109, %108 : !llvm.i64
+    %111 = llvm.insertvalue %110, %107[2, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %112 = llvm.mul %104, %109 : !llvm.i64
+    %113 = llvm.extractvalue %59[2] : !llvm<"{ i64, i64, i64 }">
+    %114 = llvm.mul %112, %113 : !llvm.i64
+    %115 = llvm.insertvalue %114, %111[3, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %116 = llvm.extractvalue %59[0] : !llvm<"{ i64, i64, i64 }">
+    %117 = llvm.extractvalue %59[1] : !llvm<"{ i64, i64, i64 }">
+    %118 = llvm.sub %117, %116 : !llvm.i64
+    %119 = llvm.insertvalue %118, %115[2, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %120 = llvm.mul %112, %117 : !llvm.i64
+    %121 = llvm.extractvalue %23[2] : !llvm<"{ i64, i64, i64 }">
+    %122 = llvm.mul %120, %121 : !llvm.i64
+    %123 = llvm.insertvalue %122, %119[3, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %124 = llvm.extractvalue %23[0] : !llvm<"{ i64, i64, i64 }">
+    %125 = llvm.extractvalue %23[1] : !llvm<"{ i64, i64, i64 }">
+    %126 = llvm.sub %125, %124 : !llvm.i64
+    %127 = llvm.insertvalue %126, %123[2, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %128 = llvm.mul %120, %125 : !llvm.i64
+    %129 = llvm.extractvalue %37[2] : !llvm<"{ i64, i64, i64 }">
+    %130 = llvm.mul %128, %129 : !llvm.i64
+    %131 = llvm.insertvalue %130, %127[3, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %132 = llvm.extractvalue %37[0] : !llvm<"{ i64, i64, i64 }">
+    %133 = llvm.extractvalue %37[1] : !llvm<"{ i64, i64, i64 }">
+    %134 = llvm.sub %133, %132 : !llvm.i64
+    %135 = llvm.insertvalue %134, %131[2, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %136 = llvm.mul %128, %133 : !llvm.i64
+    %137 = llvm.extractvalue %52[2] : !llvm<"{ i64, i64, i64 }">
+    %138 = llvm.mul %136, %137 : !llvm.i64
+    %139 = llvm.insertvalue %138, %135[3, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %140 = llvm.extractvalue %52[0] : !llvm<"{ i64, i64, i64 }">
+    %141 = llvm.extractvalue %52[1] : !llvm<"{ i64, i64, i64 }">
+    %142 = llvm.sub %141, %140 : !llvm.i64
+    %143 = llvm.insertvalue %142, %139[2, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %144 = llvm.mul %136, %141 : !llvm.i64
+    %145 = llvm.extractvalue %67[2] : !llvm<"{ i64, i64, i64 }">
+    %146 = llvm.mul %144, %145 : !llvm.i64
+    %147 = llvm.insertvalue %146, %143[3, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %148 = llvm.extractvalue %67[0] : !llvm<"{ i64, i64, i64 }">
+    %149 = llvm.extractvalue %67[1] : !llvm<"{ i64, i64, i64 }">
+    %150 = llvm.sub %149, %148 : !llvm.i64
+    %151 = llvm.insertvalue %150, %147[2, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %152 = llvm.extractvalue %arg0[2, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %153 = llvm.extractvalue %arg0[2, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %154 = llvm.extractvalue %arg0[2, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %155 = llvm.extractvalue %arg0[2, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %156 = llvm.extractvalue %arg0[2, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %157 = llvm.extractvalue %arg0[2, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %158 = llvm.extractvalue %arg0[2, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %159 = llvm.extractvalue %151[2, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %160 = llvm.extractvalue %151[2, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %161 = llvm.extractvalue %151[2, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %162 = llvm.extractvalue %151[2, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %163 = llvm.extractvalue %151[2, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %164 = llvm.extractvalue %151[2, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %165 = llvm.extractvalue %151[2, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %166 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %167 = llvm.insertvalue %0, %166[0] : !llvm<"{ i64, i64, i64 }">
+    %168 = llvm.insertvalue %152, %167[1] : !llvm<"{ i64, i64, i64 }">
+    %169 = llvm.insertvalue %1, %168[2] : !llvm<"{ i64, i64, i64 }">
+    %170 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %171 = llvm.insertvalue %0, %170[0] : !llvm<"{ i64, i64, i64 }">
+    %172 = llvm.insertvalue %153, %171[1] : !llvm<"{ i64, i64, i64 }">
+    %173 = llvm.insertvalue %1, %172[2] : !llvm<"{ i64, i64, i64 }">
+    %174 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %175 = llvm.insertvalue %0, %174[0] : !llvm<"{ i64, i64, i64 }">
+    %176 = llvm.insertvalue %154, %175[1] : !llvm<"{ i64, i64, i64 }">
+    %177 = llvm.insertvalue %1, %176[2] : !llvm<"{ i64, i64, i64 }">
+    %178 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %179 = llvm.insertvalue %0, %178[0] : !llvm<"{ i64, i64, i64 }">
+    %180 = llvm.insertvalue %155, %179[1] : !llvm<"{ i64, i64, i64 }">
+    %181 = llvm.insertvalue %1, %180[2] : !llvm<"{ i64, i64, i64 }">
+    %182 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %183 = llvm.insertvalue %0, %182[0] : !llvm<"{ i64, i64, i64 }">
+    %184 = llvm.insertvalue %156, %183[1] : !llvm<"{ i64, i64, i64 }">
+    %185 = llvm.insertvalue %1, %184[2] : !llvm<"{ i64, i64, i64 }">
+    %186 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %187 = llvm.insertvalue %0, %186[0] : !llvm<"{ i64, i64, i64 }">
+    %188 = llvm.insertvalue %157, %187[1] : !llvm<"{ i64, i64, i64 }">
+    %189 = llvm.insertvalue %1, %188[2] : !llvm<"{ i64, i64, i64 }">
+    %190 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %191 = llvm.insertvalue %0, %190[0] : !llvm<"{ i64, i64, i64 }">
+    %192 = llvm.insertvalue %158, %191[1] : !llvm<"{ i64, i64, i64 }">
+    %193 = llvm.insertvalue %1, %192[2] : !llvm<"{ i64, i64, i64 }">
+    llvm.br ^bb1(%0 : !llvm.i64)
+  ^bb1(%194: !llvm.i64):	// 2 preds: ^bb0, ^bb20
+    %195 = llvm.icmp "slt" %194, %152 : !llvm.i64
+    llvm.cond_br %195, ^bb2, ^bb21
+  ^bb2:	// pred: ^bb1
+    llvm.br ^bb3(%0 : !llvm.i64)
+  ^bb3(%196: !llvm.i64):	// 2 preds: ^bb2, ^bb19
+    %197 = llvm.icmp "slt" %196, %153 : !llvm.i64
+    llvm.cond_br %197, ^bb4, ^bb20
+  ^bb4:	// pred: ^bb3
+    llvm.br ^bb5(%0 : !llvm.i64)
+  ^bb5(%198: !llvm.i64):	// 2 preds: ^bb4, ^bb18
+    %199 = llvm.icmp "slt" %198, %154 : !llvm.i64
+    llvm.cond_br %199, ^bb6, ^bb19
+  ^bb6:	// pred: ^bb5
+    llvm.br ^bb7(%0 : !llvm.i64)
+  ^bb7(%200: !llvm.i64):	// 2 preds: ^bb6, ^bb17
+    %201 = llvm.icmp "slt" %200, %155 : !llvm.i64
+    llvm.cond_br %201, ^bb8, ^bb18
+  ^bb8:	// pred: ^bb7
+    llvm.br ^bb9(%0 : !llvm.i64)
+  ^bb9(%202: !llvm.i64):	// 2 preds: ^bb8, ^bb16
+    %203 = llvm.icmp "slt" %202, %156 : !llvm.i64
+    llvm.cond_br %203, ^bb10, ^bb17
+  ^bb10:	// pred: ^bb9
+    llvm.br ^bb11(%0 : !llvm.i64)
+  ^bb11(%204: !llvm.i64):	// 2 preds: ^bb10, ^bb15
+    %205 = llvm.icmp "slt" %204, %157 : !llvm.i64
+    llvm.cond_br %205, ^bb12, ^bb16
+  ^bb12:	// pred: ^bb11
+    llvm.br ^bb13(%0 : !llvm.i64)
+  ^bb13(%206: !llvm.i64):	// 2 preds: ^bb12, ^bb14
+    %207 = llvm.icmp "slt" %206, %158 : !llvm.i64
+    llvm.cond_br %207, ^bb14, ^bb15
+  ^bb14:	// pred: ^bb13
+    %208 = llvm.extractvalue %arg0[0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %209 = llvm.extractvalue %arg0[1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %210 = llvm.extractvalue %arg0[3, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %211 = llvm.mul %194, %210 : !llvm.i64
+    %212 = llvm.add %209, %211 : !llvm.i64
+    %213 = llvm.extractvalue %arg0[3, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %214 = llvm.mul %196, %213 : !llvm.i64
+    %215 = llvm.add %212, %214 : !llvm.i64
+    %216 = llvm.extractvalue %arg0[3, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %217 = llvm.mul %198, %216 : !llvm.i64
+    %218 = llvm.add %215, %217 : !llvm.i64
+    %219 = llvm.extractvalue %arg0[3, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %220 = llvm.mul %200, %219 : !llvm.i64
+    %221 = llvm.add %218, %220 : !llvm.i64
+    %222 = llvm.extractvalue %arg0[3, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %223 = llvm.mul %202, %222 : !llvm.i64
+    %224 = llvm.add %221, %223 : !llvm.i64
+    %225 = llvm.extractvalue %arg0[3, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %226 = llvm.mul %204, %225 : !llvm.i64
+    %227 = llvm.add %224, %226 : !llvm.i64
+    %228 = llvm.extractvalue %arg0[3, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %229 = llvm.mul %206, %228 : !llvm.i64
+    %230 = llvm.add %227, %229 : !llvm.i64
+    %231 = llvm.getelementptr %208[%230] : (!llvm<"double*">, !llvm.i64) -> !llvm<"double*">
+    %232 = llvm.load %231 : !llvm<"double*">
+    %233 = llvm.extractvalue %151[0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %234 = llvm.extractvalue %151[1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %235 = llvm.extractvalue %151[3, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %236 = llvm.mul %202, %235 : !llvm.i64
+    %237 = llvm.add %234, %236 : !llvm.i64
+    %238 = llvm.extractvalue %151[3, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %239 = llvm.mul %194, %238 : !llvm.i64
+    %240 = llvm.add %237, %239 : !llvm.i64
+    %241 = llvm.extractvalue %151[3, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %242 = llvm.mul %204, %241 : !llvm.i64
+    %243 = llvm.add %240, %242 : !llvm.i64
+    %244 = llvm.extractvalue %151[3, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %245 = llvm.mul %196, %244 : !llvm.i64
+    %246 = llvm.add %243, %245 : !llvm.i64
+    %247 = llvm.extractvalue %151[3, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %248 = llvm.mul %198, %247 : !llvm.i64
+    %249 = llvm.add %246, %248 : !llvm.i64
+    %250 = llvm.extractvalue %151[3, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %251 = llvm.mul %206, %250 : !llvm.i64
+    %252 = llvm.add %249, %251 : !llvm.i64
+    %253 = llvm.extractvalue %151[3, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %254 = llvm.mul %200, %253 : !llvm.i64
+    %255 = llvm.add %252, %254 : !llvm.i64
+    %256 = llvm.getelementptr %233[%255] : (!llvm<"double*">, !llvm.i64) -> !llvm<"double*">
+    llvm.store %232, %256 : !llvm<"double*">
+    %257 = llvm.add %206, %1 : !llvm.i64
+    llvm.br ^bb13(%257 : !llvm.i64)
+  ^bb15:	// pred: ^bb13
+    %258 = llvm.add %204, %1 : !llvm.i64
+    llvm.br ^bb11(%258 : !llvm.i64)
+  ^bb16:	// pred: ^bb11
+    %259 = llvm.add %202, %1 : !llvm.i64
+    llvm.br ^bb9(%259 : !llvm.i64)
+  ^bb17:	// pred: ^bb9
+    %260 = llvm.add %200, %1 : !llvm.i64
+    llvm.br ^bb7(%260 : !llvm.i64)
+  ^bb18:	// pred: ^bb7
+    %261 = llvm.add %198, %1 : !llvm.i64
+    llvm.br ^bb5(%261 : !llvm.i64)
+  ^bb19:	// pred: ^bb5
+    %262 = llvm.add %196, %1 : !llvm.i64
+    llvm.br ^bb3(%262 : !llvm.i64)
+  ^bb20:	// pred: ^bb3
+    %263 = llvm.add %194, %1 : !llvm.i64
+    llvm.br ^bb1(%263 : !llvm.i64)
+  ^bb21:	// pred: ^bb1
+    llvm.return %151 : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+  }
+  func @tilegemm(%arg0: !llvm<"{ double*, i64 }">, %arg1: !llvm<"{ double*, i64 }">, %arg2: !llvm<"{ double*, i64 }">) {
+    %0 = llvm.constant(0 : index) : !llvm.i64
+    %1 = llvm.constant(1 : index) : !llvm.i64
+    %2 = llvm.constant(768 : index) : !llvm.i64
+    %3 = llvm.constant(6 : index) : !llvm.i64
+    %4 = llvm.constant(8 : index) : !llvm.i64
+    %5 = llvm.constant(256 : index) : !llvm.i64
+    %6 = llvm.constant(6 : index) : !llvm.i64
+    %7 = llvm.constant(8 : index) : !llvm.i64
+    %8 = llvm.constant(256 : index) : !llvm.i64
+    %9 = llvm.constant(96 : index) : !llvm.i64
+    %10 = llvm.constant(8 : index) : !llvm.i64
+    %11 = llvm.constant(256 : index) : !llvm.i64
+    %12 = llvm.constant(96 : index) : !llvm.i64
+    %13 = llvm.constant(768 : index) : !llvm.i64
+    %14 = llvm.constant(1 : index) : !llvm.i64
+    %15 = llvm.constant(0 : index) : !llvm.i64
+    %16 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %17 = llvm.insertvalue %15, %16[0] : !llvm<"{ i64, i64, i64 }">
+    %18 = llvm.insertvalue %3, %17[1] : !llvm<"{ i64, i64, i64 }">
+    %19 = llvm.insertvalue %14, %18[2] : !llvm<"{ i64, i64, i64 }">
+    %20 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %21 = llvm.insertvalue %15, %20[0] : !llvm<"{ i64, i64, i64 }">
+    %22 = llvm.insertvalue %4, %21[1] : !llvm<"{ i64, i64, i64 }">
+    %23 = llvm.insertvalue %14, %22[2] : !llvm<"{ i64, i64, i64 }">
+    %24 = llvm.sdiv %6, %3 : !llvm.i64
+    %25 = llvm.sdiv %7, %4 : !llvm.i64
+    %26 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %27 = llvm.insertvalue %15, %26[0] : !llvm<"{ i64, i64, i64 }">
+    %28 = llvm.insertvalue %5, %27[1] : !llvm<"{ i64, i64, i64 }">
+    %29 = llvm.insertvalue %14, %28[2] : !llvm<"{ i64, i64, i64 }">
+    %30 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %31 = llvm.insertvalue %15, %30[0] : !llvm<"{ i64, i64, i64 }">
+    %32 = llvm.insertvalue %24, %31[1] : !llvm<"{ i64, i64, i64 }">
+    %33 = llvm.insertvalue %14, %32[2] : !llvm<"{ i64, i64, i64 }">
+    %34 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %35 = llvm.insertvalue %15, %34[0] : !llvm<"{ i64, i64, i64 }">
+    %36 = llvm.insertvalue %25, %35[1] : !llvm<"{ i64, i64, i64 }">
+    %37 = llvm.insertvalue %14, %36[2] : !llvm<"{ i64, i64, i64 }">
+    %38 = llvm.sdiv %8, %5 : !llvm.i64
+    %39 = llvm.sdiv %9, %6 : !llvm.i64
+    %40 = llvm.sdiv %10, %7 : !llvm.i64
+    %41 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %42 = llvm.insertvalue %15, %41[0] : !llvm<"{ i64, i64, i64 }">
+    %43 = llvm.insertvalue %38, %42[1] : !llvm<"{ i64, i64, i64 }">
+    %44 = llvm.insertvalue %14, %43[2] : !llvm<"{ i64, i64, i64 }">
+    %45 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %46 = llvm.insertvalue %15, %45[0] : !llvm<"{ i64, i64, i64 }">
+    %47 = llvm.insertvalue %39, %46[1] : !llvm<"{ i64, i64, i64 }">
+    %48 = llvm.insertvalue %14, %47[2] : !llvm<"{ i64, i64, i64 }">
+    %49 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %50 = llvm.insertvalue %15, %49[0] : !llvm<"{ i64, i64, i64 }">
+    %51 = llvm.insertvalue %40, %50[1] : !llvm<"{ i64, i64, i64 }">
+    %52 = llvm.insertvalue %14, %51[2] : !llvm<"{ i64, i64, i64 }">
+    %53 = llvm.sdiv %11, %8 : !llvm.i64
+    %54 = llvm.sdiv %12, %9 : !llvm.i64
+    %55 = llvm.sdiv %13, %10 : !llvm.i64
+    %56 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %57 = llvm.insertvalue %15, %56[0] : !llvm<"{ i64, i64, i64 }">
+    %58 = llvm.insertvalue %53, %57[1] : !llvm<"{ i64, i64, i64 }">
+    %59 = llvm.insertvalue %14, %58[2] : !llvm<"{ i64, i64, i64 }">
+    %60 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %61 = llvm.insertvalue %15, %60[0] : !llvm<"{ i64, i64, i64 }">
+    %62 = llvm.insertvalue %54, %61[1] : !llvm<"{ i64, i64, i64 }">
+    %63 = llvm.insertvalue %14, %62[2] : !llvm<"{ i64, i64, i64 }">
+    %64 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %65 = llvm.insertvalue %15, %64[0] : !llvm<"{ i64, i64, i64 }">
+    %66 = llvm.insertvalue %55, %65[1] : !llvm<"{ i64, i64, i64 }">
+    %67 = llvm.insertvalue %14, %66[2] : !llvm<"{ i64, i64, i64 }">
+    %68 = llvm.sdiv %2, %11 : !llvm.i64
+    %69 = llvm.sdiv %2, %12 : !llvm.i64
+    %70 = llvm.sdiv %2, %13 : !llvm.i64
+    %71 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %72 = llvm.insertvalue %15, %71[0] : !llvm<"{ i64, i64, i64 }">
+    %73 = llvm.insertvalue %68, %72[1] : !llvm<"{ i64, i64, i64 }">
+    %74 = llvm.insertvalue %14, %73[2] : !llvm<"{ i64, i64, i64 }">
+    %75 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %76 = llvm.insertvalue %15, %75[0] : !llvm<"{ i64, i64, i64 }">
+    %77 = llvm.insertvalue %69, %76[1] : !llvm<"{ i64, i64, i64 }">
+    %78 = llvm.insertvalue %14, %77[2] : !llvm<"{ i64, i64, i64 }">
+    %79 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %80 = llvm.insertvalue %15, %79[0] : !llvm<"{ i64, i64, i64 }">
+    %81 = llvm.insertvalue %70, %80[1] : !llvm<"{ i64, i64, i64 }">
+    %82 = llvm.insertvalue %14, %81[2] : !llvm<"{ i64, i64, i64 }">
+    %83 = llvm.undef : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %84 = llvm.extractvalue %arg0[0] : !llvm<"{ double*, i64 }">
+    %85 = llvm.insertvalue %84, %83[0] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %86 = llvm.constant(0 : index) : !llvm.i64
+    %87 = llvm.insertvalue %86, %85[1] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %88 = llvm.constant(1 : index) : !llvm.i64
+    %89 = llvm.extractvalue %29[2] : !llvm<"{ i64, i64, i64 }">
+    %90 = llvm.mul %88, %89 : !llvm.i64
+    %91 = llvm.insertvalue %90, %87[3, 8] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %92 = llvm.extractvalue %29[0] : !llvm<"{ i64, i64, i64 }">
+    %93 = llvm.extractvalue %29[1] : !llvm<"{ i64, i64, i64 }">
+    %94 = llvm.sub %93, %92 : !llvm.i64
+    %95 = llvm.insertvalue %94, %91[2, 8] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %96 = llvm.mul %88, %93 : !llvm.i64
+    %97 = llvm.extractvalue %44[2] : !llvm<"{ i64, i64, i64 }">
+    %98 = llvm.mul %96, %97 : !llvm.i64
+    %99 = llvm.insertvalue %98, %95[3, 7] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %100 = llvm.extractvalue %44[0] : !llvm<"{ i64, i64, i64 }">
+    %101 = llvm.extractvalue %44[1] : !llvm<"{ i64, i64, i64 }">
+    %102 = llvm.sub %101, %100 : !llvm.i64
+    %103 = llvm.insertvalue %102, %99[2, 7] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %104 = llvm.mul %96, %101 : !llvm.i64
+    %105 = llvm.extractvalue %59[2] : !llvm<"{ i64, i64, i64 }">
+    %106 = llvm.mul %104, %105 : !llvm.i64
+    %107 = llvm.insertvalue %106, %103[3, 6] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %108 = llvm.extractvalue %59[0] : !llvm<"{ i64, i64, i64 }">
+    %109 = llvm.extractvalue %59[1] : !llvm<"{ i64, i64, i64 }">
+    %110 = llvm.sub %109, %108 : !llvm.i64
+    %111 = llvm.insertvalue %110, %107[2, 6] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %112 = llvm.mul %104, %109 : !llvm.i64
+    %113 = llvm.extractvalue %74[2] : !llvm<"{ i64, i64, i64 }">
+    %114 = llvm.mul %112, %113 : !llvm.i64
+    %115 = llvm.insertvalue %114, %111[3, 5] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %116 = llvm.extractvalue %74[0] : !llvm<"{ i64, i64, i64 }">
+    %117 = llvm.extractvalue %74[1] : !llvm<"{ i64, i64, i64 }">
+    %118 = llvm.sub %117, %116 : !llvm.i64
+    %119 = llvm.insertvalue %118, %115[2, 5] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %120 = llvm.mul %112, %117 : !llvm.i64
+    %121 = llvm.extractvalue %19[2] : !llvm<"{ i64, i64, i64 }">
+    %122 = llvm.mul %120, %121 : !llvm.i64
+    %123 = llvm.insertvalue %122, %119[3, 4] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %124 = llvm.extractvalue %19[0] : !llvm<"{ i64, i64, i64 }">
+    %125 = llvm.extractvalue %19[1] : !llvm<"{ i64, i64, i64 }">
+    %126 = llvm.sub %125, %124 : !llvm.i64
+    %127 = llvm.insertvalue %126, %123[2, 4] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %128 = llvm.mul %120, %125 : !llvm.i64
+    %129 = llvm.extractvalue %33[2] : !llvm<"{ i64, i64, i64 }">
+    %130 = llvm.mul %128, %129 : !llvm.i64
+    %131 = llvm.insertvalue %130, %127[3, 3] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %132 = llvm.extractvalue %33[0] : !llvm<"{ i64, i64, i64 }">
+    %133 = llvm.extractvalue %33[1] : !llvm<"{ i64, i64, i64 }">
+    %134 = llvm.sub %133, %132 : !llvm.i64
+    %135 = llvm.insertvalue %134, %131[2, 3] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %136 = llvm.mul %128, %133 : !llvm.i64
+    %137 = llvm.extractvalue %48[2] : !llvm<"{ i64, i64, i64 }">
+    %138 = llvm.mul %136, %137 : !llvm.i64
+    %139 = llvm.insertvalue %138, %135[3, 2] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %140 = llvm.extractvalue %48[0] : !llvm<"{ i64, i64, i64 }">
+    %141 = llvm.extractvalue %48[1] : !llvm<"{ i64, i64, i64 }">
+    %142 = llvm.sub %141, %140 : !llvm.i64
+    %143 = llvm.insertvalue %142, %139[2, 2] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %144 = llvm.mul %136, %141 : !llvm.i64
+    %145 = llvm.extractvalue %63[2] : !llvm<"{ i64, i64, i64 }">
+    %146 = llvm.mul %144, %145 : !llvm.i64
+    %147 = llvm.insertvalue %146, %143[3, 1] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %148 = llvm.extractvalue %63[0] : !llvm<"{ i64, i64, i64 }">
+    %149 = llvm.extractvalue %63[1] : !llvm<"{ i64, i64, i64 }">
+    %150 = llvm.sub %149, %148 : !llvm.i64
+    %151 = llvm.insertvalue %150, %147[2, 1] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %152 = llvm.mul %144, %149 : !llvm.i64
+    %153 = llvm.extractvalue %78[2] : !llvm<"{ i64, i64, i64 }">
+    %154 = llvm.mul %152, %153 : !llvm.i64
+    %155 = llvm.insertvalue %154, %151[3, 0] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %156 = llvm.extractvalue %78[0] : !llvm<"{ i64, i64, i64 }">
+    %157 = llvm.extractvalue %78[1] : !llvm<"{ i64, i64, i64 }">
+    %158 = llvm.sub %157, %156 : !llvm.i64
+    %159 = llvm.insertvalue %158, %155[2, 0] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %160 = llvm.undef : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %161 = llvm.extractvalue %arg1[0] : !llvm<"{ double*, i64 }">
+    %162 = llvm.insertvalue %161, %160[0] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %163 = llvm.constant(0 : index) : !llvm.i64
+    %164 = llvm.insertvalue %163, %162[1] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %165 = llvm.constant(1 : index) : !llvm.i64
+    %166 = llvm.extractvalue %29[2] : !llvm<"{ i64, i64, i64 }">
+    %167 = llvm.mul %165, %166 : !llvm.i64
+    %168 = llvm.insertvalue %167, %164[3, 8] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %169 = llvm.extractvalue %29[0] : !llvm<"{ i64, i64, i64 }">
+    %170 = llvm.extractvalue %29[1] : !llvm<"{ i64, i64, i64 }">
+    %171 = llvm.sub %170, %169 : !llvm.i64
+    %172 = llvm.insertvalue %171, %168[2, 8] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %173 = llvm.mul %165, %170 : !llvm.i64
+    %174 = llvm.extractvalue %44[2] : !llvm<"{ i64, i64, i64 }">
+    %175 = llvm.mul %173, %174 : !llvm.i64
+    %176 = llvm.insertvalue %175, %172[3, 7] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %177 = llvm.extractvalue %44[0] : !llvm<"{ i64, i64, i64 }">
+    %178 = llvm.extractvalue %44[1] : !llvm<"{ i64, i64, i64 }">
+    %179 = llvm.sub %178, %177 : !llvm.i64
+    %180 = llvm.insertvalue %179, %176[2, 7] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %181 = llvm.mul %173, %178 : !llvm.i64
+    %182 = llvm.extractvalue %59[2] : !llvm<"{ i64, i64, i64 }">
+    %183 = llvm.mul %181, %182 : !llvm.i64
+    %184 = llvm.insertvalue %183, %180[3, 6] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %185 = llvm.extractvalue %59[0] : !llvm<"{ i64, i64, i64 }">
+    %186 = llvm.extractvalue %59[1] : !llvm<"{ i64, i64, i64 }">
+    %187 = llvm.sub %186, %185 : !llvm.i64
+    %188 = llvm.insertvalue %187, %184[2, 6] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %189 = llvm.mul %181, %186 : !llvm.i64
+    %190 = llvm.extractvalue %74[2] : !llvm<"{ i64, i64, i64 }">
+    %191 = llvm.mul %189, %190 : !llvm.i64
+    %192 = llvm.insertvalue %191, %188[3, 5] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %193 = llvm.extractvalue %74[0] : !llvm<"{ i64, i64, i64 }">
+    %194 = llvm.extractvalue %74[1] : !llvm<"{ i64, i64, i64 }">
+    %195 = llvm.sub %194, %193 : !llvm.i64
+    %196 = llvm.insertvalue %195, %192[2, 5] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %197 = llvm.mul %189, %194 : !llvm.i64
+    %198 = llvm.extractvalue %23[2] : !llvm<"{ i64, i64, i64 }">
+    %199 = llvm.mul %197, %198 : !llvm.i64
+    %200 = llvm.insertvalue %199, %196[3, 4] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %201 = llvm.extractvalue %23[0] : !llvm<"{ i64, i64, i64 }">
+    %202 = llvm.extractvalue %23[1] : !llvm<"{ i64, i64, i64 }">
+    %203 = llvm.sub %202, %201 : !llvm.i64
+    %204 = llvm.insertvalue %203, %200[2, 4] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %205 = llvm.mul %197, %202 : !llvm.i64
+    %206 = llvm.extractvalue %37[2] : !llvm<"{ i64, i64, i64 }">
+    %207 = llvm.mul %205, %206 : !llvm.i64
+    %208 = llvm.insertvalue %207, %204[3, 3] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %209 = llvm.extractvalue %37[0] : !llvm<"{ i64, i64, i64 }">
+    %210 = llvm.extractvalue %37[1] : !llvm<"{ i64, i64, i64 }">
+    %211 = llvm.sub %210, %209 : !llvm.i64
+    %212 = llvm.insertvalue %211, %208[2, 3] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %213 = llvm.mul %205, %210 : !llvm.i64
+    %214 = llvm.extractvalue %52[2] : !llvm<"{ i64, i64, i64 }">
+    %215 = llvm.mul %213, %214 : !llvm.i64
+    %216 = llvm.insertvalue %215, %212[3, 2] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %217 = llvm.extractvalue %52[0] : !llvm<"{ i64, i64, i64 }">
+    %218 = llvm.extractvalue %52[1] : !llvm<"{ i64, i64, i64 }">
+    %219 = llvm.sub %218, %217 : !llvm.i64
+    %220 = llvm.insertvalue %219, %216[2, 2] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %221 = llvm.mul %213, %218 : !llvm.i64
+    %222 = llvm.extractvalue %67[2] : !llvm<"{ i64, i64, i64 }">
+    %223 = llvm.mul %221, %222 : !llvm.i64
+    %224 = llvm.insertvalue %223, %220[3, 1] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %225 = llvm.extractvalue %67[0] : !llvm<"{ i64, i64, i64 }">
+    %226 = llvm.extractvalue %67[1] : !llvm<"{ i64, i64, i64 }">
+    %227 = llvm.sub %226, %225 : !llvm.i64
+    %228 = llvm.insertvalue %227, %224[2, 1] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %229 = llvm.mul %221, %226 : !llvm.i64
+    %230 = llvm.extractvalue %82[2] : !llvm<"{ i64, i64, i64 }">
+    %231 = llvm.mul %229, %230 : !llvm.i64
+    %232 = llvm.insertvalue %231, %228[3, 0] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %233 = llvm.extractvalue %82[0] : !llvm<"{ i64, i64, i64 }">
+    %234 = llvm.extractvalue %82[1] : !llvm<"{ i64, i64, i64 }">
+    %235 = llvm.sub %234, %233 : !llvm.i64
+    %236 = llvm.insertvalue %235, %232[2, 0] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %237 = llvm.undef : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %238 = llvm.extractvalue %arg2[0] : !llvm<"{ double*, i64 }">
+    %239 = llvm.insertvalue %238, %237[0] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %240 = llvm.constant(0 : index) : !llvm.i64
+    %241 = llvm.insertvalue %240, %239[1] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %242 = llvm.constant(1 : index) : !llvm.i64
+    %243 = llvm.extractvalue %23[2] : !llvm<"{ i64, i64, i64 }">
+    %244 = llvm.mul %242, %243 : !llvm.i64
+    %245 = llvm.insertvalue %244, %241[3, 9] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %246 = llvm.extractvalue %23[0] : !llvm<"{ i64, i64, i64 }">
+    %247 = llvm.extractvalue %23[1] : !llvm<"{ i64, i64, i64 }">
+    %248 = llvm.sub %247, %246 : !llvm.i64
+    %249 = llvm.insertvalue %248, %245[2, 9] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %250 = llvm.mul %242, %247 : !llvm.i64
+    %251 = llvm.extractvalue %37[2] : !llvm<"{ i64, i64, i64 }">
+    %252 = llvm.mul %250, %251 : !llvm.i64
+    %253 = llvm.insertvalue %252, %249[3, 8] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %254 = llvm.extractvalue %37[0] : !llvm<"{ i64, i64, i64 }">
+    %255 = llvm.extractvalue %37[1] : !llvm<"{ i64, i64, i64 }">
+    %256 = llvm.sub %255, %254 : !llvm.i64
+    %257 = llvm.insertvalue %256, %253[2, 8] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %258 = llvm.mul %250, %255 : !llvm.i64
+    %259 = llvm.extractvalue %52[2] : !llvm<"{ i64, i64, i64 }">
+    %260 = llvm.mul %258, %259 : !llvm.i64
+    %261 = llvm.insertvalue %260, %257[3, 7] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %262 = llvm.extractvalue %52[0] : !llvm<"{ i64, i64, i64 }">
+    %263 = llvm.extractvalue %52[1] : !llvm<"{ i64, i64, i64 }">
+    %264 = llvm.sub %263, %262 : !llvm.i64
+    %265 = llvm.insertvalue %264, %261[2, 7] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %266 = llvm.mul %258, %263 : !llvm.i64
+    %267 = llvm.extractvalue %67[2] : !llvm<"{ i64, i64, i64 }">
+    %268 = llvm.mul %266, %267 : !llvm.i64
+    %269 = llvm.insertvalue %268, %265[3, 6] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %270 = llvm.extractvalue %67[0] : !llvm<"{ i64, i64, i64 }">
+    %271 = llvm.extractvalue %67[1] : !llvm<"{ i64, i64, i64 }">
+    %272 = llvm.sub %271, %270 : !llvm.i64
+    %273 = llvm.insertvalue %272, %269[2, 6] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %274 = llvm.mul %266, %271 : !llvm.i64
+    %275 = llvm.extractvalue %82[2] : !llvm<"{ i64, i64, i64 }">
+    %276 = llvm.mul %274, %275 : !llvm.i64
+    %277 = llvm.insertvalue %276, %273[3, 5] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %278 = llvm.extractvalue %82[0] : !llvm<"{ i64, i64, i64 }">
+    %279 = llvm.extractvalue %82[1] : !llvm<"{ i64, i64, i64 }">
+    %280 = llvm.sub %279, %278 : !llvm.i64
+    %281 = llvm.insertvalue %280, %277[2, 5] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %282 = llvm.mul %274, %279 : !llvm.i64
+    %283 = llvm.extractvalue %19[2] : !llvm<"{ i64, i64, i64 }">
+    %284 = llvm.mul %282, %283 : !llvm.i64
+    %285 = llvm.insertvalue %284, %281[3, 4] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %286 = llvm.extractvalue %19[0] : !llvm<"{ i64, i64, i64 }">
+    %287 = llvm.extractvalue %19[1] : !llvm<"{ i64, i64, i64 }">
+    %288 = llvm.sub %287, %286 : !llvm.i64
+    %289 = llvm.insertvalue %288, %285[2, 4] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %290 = llvm.mul %282, %287 : !llvm.i64
+    %291 = llvm.extractvalue %33[2] : !llvm<"{ i64, i64, i64 }">
+    %292 = llvm.mul %290, %291 : !llvm.i64
+    %293 = llvm.insertvalue %292, %289[3, 3] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %294 = llvm.extractvalue %33[0] : !llvm<"{ i64, i64, i64 }">
+    %295 = llvm.extractvalue %33[1] : !llvm<"{ i64, i64, i64 }">
+    %296 = llvm.sub %295, %294 : !llvm.i64
+    %297 = llvm.insertvalue %296, %293[2, 3] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %298 = llvm.mul %290, %295 : !llvm.i64
+    %299 = llvm.extractvalue %48[2] : !llvm<"{ i64, i64, i64 }">
+    %300 = llvm.mul %298, %299 : !llvm.i64
+    %301 = llvm.insertvalue %300, %297[3, 2] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %302 = llvm.extractvalue %48[0] : !llvm<"{ i64, i64, i64 }">
+    %303 = llvm.extractvalue %48[1] : !llvm<"{ i64, i64, i64 }">
+    %304 = llvm.sub %303, %302 : !llvm.i64
+    %305 = llvm.insertvalue %304, %301[2, 2] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %306 = llvm.mul %298, %303 : !llvm.i64
+    %307 = llvm.extractvalue %63[2] : !llvm<"{ i64, i64, i64 }">
+    %308 = llvm.mul %306, %307 : !llvm.i64
+    %309 = llvm.insertvalue %308, %305[3, 1] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %310 = llvm.extractvalue %63[0] : !llvm<"{ i64, i64, i64 }">
+    %311 = llvm.extractvalue %63[1] : !llvm<"{ i64, i64, i64 }">
+    %312 = llvm.sub %311, %310 : !llvm.i64
+    %313 = llvm.insertvalue %312, %309[2, 1] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %314 = llvm.mul %306, %311 : !llvm.i64
+    %315 = llvm.extractvalue %78[2] : !llvm<"{ i64, i64, i64 }">
+    %316 = llvm.mul %314, %315 : !llvm.i64
+    %317 = llvm.insertvalue %316, %313[3, 0] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %318 = llvm.extractvalue %78[0] : !llvm<"{ i64, i64, i64 }">
+    %319 = llvm.extractvalue %78[1] : !llvm<"{ i64, i64, i64 }">
+    %320 = llvm.sub %319, %318 : !llvm.i64
+    %321 = llvm.insertvalue %320, %317[2, 0] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    llvm.br ^bb1(%15 : !llvm.i64)
+  ^bb1(%322: !llvm.i64):	// 2 preds: ^bb0, ^bb41
+    %323 = llvm.icmp "slt" %322, %68 : !llvm.i64
+    llvm.cond_br %323, ^bb2, ^bb42
+  ^bb2:	// pred: ^bb1
+    llvm.br ^bb3(%15 : !llvm.i64)
+  ^bb3(%324: !llvm.i64):	// 2 preds: ^bb2, ^bb40
+    %325 = llvm.icmp "slt" %324, %70 : !llvm.i64
+    llvm.cond_br %325, ^bb4, ^bb41
+  ^bb4:	// pred: ^bb3
+    llvm.call @debugs() : () -> ()
+    %326 = llvm.undef : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %327 = llvm.extractvalue %236[0] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %328 = llvm.insertvalue %327, %326[0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %329 = llvm.extractvalue %236[3, 0] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %330 = llvm.extractvalue %236[3, 1] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %331 = llvm.extractvalue %236[3, 2] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %332 = llvm.extractvalue %236[3, 3] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %333 = llvm.extractvalue %236[3, 4] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %334 = llvm.extractvalue %236[3, 5] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %335 = llvm.extractvalue %236[3, 6] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %336 = llvm.extractvalue %236[3, 7] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %337 = llvm.extractvalue %236[3, 8] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %338 = llvm.extractvalue %236[1] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %339 = llvm.mul %324, %329 : !llvm.i64
+    %340 = llvm.add %338, %339 : !llvm.i64
+    %341 = llvm.extractvalue %67[0] : !llvm<"{ i64, i64, i64 }">
+    %342 = llvm.mul %341, %330 : !llvm.i64
+    %343 = llvm.add %340, %342 : !llvm.i64
+    %344 = llvm.extractvalue %52[0] : !llvm<"{ i64, i64, i64 }">
+    %345 = llvm.mul %344, %331 : !llvm.i64
+    %346 = llvm.add %343, %345 : !llvm.i64
+    %347 = llvm.extractvalue %37[0] : !llvm<"{ i64, i64, i64 }">
+    %348 = llvm.mul %347, %332 : !llvm.i64
+    %349 = llvm.add %346, %348 : !llvm.i64
+    %350 = llvm.extractvalue %23[0] : !llvm<"{ i64, i64, i64 }">
+    %351 = llvm.mul %350, %333 : !llvm.i64
+    %352 = llvm.add %349, %351 : !llvm.i64
+    %353 = llvm.mul %322, %334 : !llvm.i64
+    %354 = llvm.add %352, %353 : !llvm.i64
+    %355 = llvm.extractvalue %59[0] : !llvm<"{ i64, i64, i64 }">
+    %356 = llvm.mul %355, %335 : !llvm.i64
+    %357 = llvm.add %354, %356 : !llvm.i64
+    %358 = llvm.extractvalue %44[0] : !llvm<"{ i64, i64, i64 }">
+    %359 = llvm.mul %358, %336 : !llvm.i64
+    %360 = llvm.add %357, %359 : !llvm.i64
+    %361 = llvm.extractvalue %29[0] : !llvm<"{ i64, i64, i64 }">
+    %362 = llvm.mul %361, %337 : !llvm.i64
+    %363 = llvm.add %360, %362 : !llvm.i64
+    %364 = llvm.insertvalue %363, %328[1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %365 = llvm.extractvalue %324[0] : !llvm.i64
+    %366 = llvm.extractvalue %324[1] : !llvm.i64
+    %367 = llvm.sub %366, %365 : !llvm.i64
+    %368 = llvm.insertvalue %367, %364[2, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %369 = llvm.extractvalue %67[0] : !llvm<"{ i64, i64, i64 }">
+    %370 = llvm.extractvalue %67[1] : !llvm<"{ i64, i64, i64 }">
+    %371 = llvm.sub %370, %369 : !llvm.i64
+    %372 = llvm.insertvalue %371, %368[2, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %373 = llvm.extractvalue %52[0] : !llvm<"{ i64, i64, i64 }">
+    %374 = llvm.extractvalue %52[1] : !llvm<"{ i64, i64, i64 }">
+    %375 = llvm.sub %374, %373 : !llvm.i64
+    %376 = llvm.insertvalue %375, %372[2, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %377 = llvm.extractvalue %37[0] : !llvm<"{ i64, i64, i64 }">
+    %378 = llvm.extractvalue %37[1] : !llvm<"{ i64, i64, i64 }">
+    %379 = llvm.sub %378, %377 : !llvm.i64
+    %380 = llvm.insertvalue %379, %376[2, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %381 = llvm.extractvalue %23[0] : !llvm<"{ i64, i64, i64 }">
+    %382 = llvm.extractvalue %23[1] : !llvm<"{ i64, i64, i64 }">
+    %383 = llvm.sub %382, %381 : !llvm.i64
+    %384 = llvm.insertvalue %383, %380[2, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %385 = llvm.extractvalue %322[0] : !llvm.i64
+    %386 = llvm.extractvalue %322[1] : !llvm.i64
+    %387 = llvm.sub %386, %385 : !llvm.i64
+    %388 = llvm.insertvalue %387, %384[2, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %389 = llvm.extractvalue %59[0] : !llvm<"{ i64, i64, i64 }">
+    %390 = llvm.extractvalue %59[1] : !llvm<"{ i64, i64, i64 }">
+    %391 = llvm.sub %390, %389 : !llvm.i64
+    %392 = llvm.insertvalue %391, %388[2, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %393 = llvm.extractvalue %67[2] : !llvm<"{ i64, i64, i64 }">
+    %394 = llvm.mul %330, %393 : !llvm.i64
+    %395 = llvm.insertvalue %394, %392[3, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %396 = llvm.extractvalue %52[2] : !llvm<"{ i64, i64, i64 }">
+    %397 = llvm.mul %331, %396 : !llvm.i64
+    %398 = llvm.insertvalue %397, %395[3, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %399 = llvm.extractvalue %37[2] : !llvm<"{ i64, i64, i64 }">
+    %400 = llvm.mul %332, %399 : !llvm.i64
+    %401 = llvm.insertvalue %400, %398[3, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %402 = llvm.extractvalue %23[2] : !llvm<"{ i64, i64, i64 }">
+    %403 = llvm.mul %333, %402 : !llvm.i64
+    %404 = llvm.insertvalue %403, %401[3, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %405 = llvm.extractvalue %59[2] : !llvm<"{ i64, i64, i64 }">
+    %406 = llvm.mul %335, %405 : !llvm.i64
+    %407 = llvm.insertvalue %406, %404[3, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %408 = llvm.extractvalue %44[2] : !llvm<"{ i64, i64, i64 }">
+    %409 = llvm.mul %336, %408 : !llvm.i64
+    %410 = llvm.insertvalue %409, %407[3, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %411 = llvm.extractvalue %29[2] : !llvm<"{ i64, i64, i64 }">
+    %412 = llvm.mul %337, %411 : !llvm.i64
+    %413 = llvm.insertvalue %412, %410[3, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    llvm.call @debugs() : () -> ()
+    %414 = llvm.call @packB(%413) : (!llvm<"{ double*, i64, [7 x i64], [7 x i64] }">) -> !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    llvm.br ^bb5(%15 : !llvm.i64)
+  ^bb5(%415: !llvm.i64):	// 2 preds: ^bb4, ^bb39
+    %416 = llvm.icmp "slt" %415, %69 : !llvm.i64
+    llvm.cond_br %416, ^bb6, ^bb40
+  ^bb6:	// pred: ^bb5
+    %417 = llvm.undef : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %418 = llvm.extractvalue %159[0] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %419 = llvm.insertvalue %418, %417[0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %420 = llvm.extractvalue %159[3, 0] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %421 = llvm.extractvalue %159[3, 1] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %422 = llvm.extractvalue %159[3, 2] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %423 = llvm.extractvalue %159[3, 3] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %424 = llvm.extractvalue %159[3, 4] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %425 = llvm.extractvalue %159[3, 5] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %426 = llvm.extractvalue %159[3, 6] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %427 = llvm.extractvalue %159[3, 7] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %428 = llvm.extractvalue %159[3, 8] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %429 = llvm.extractvalue %159[1] : !llvm<"{ double*, i64, [9 x i64], [9 x i64] }">
+    %430 = llvm.mul %415, %420 : !llvm.i64
+    %431 = llvm.add %429, %430 : !llvm.i64
+    %432 = llvm.extractvalue %63[0] : !llvm<"{ i64, i64, i64 }">
+    %433 = llvm.mul %432, %421 : !llvm.i64
+    %434 = llvm.add %431, %433 : !llvm.i64
+    %435 = llvm.extractvalue %48[0] : !llvm<"{ i64, i64, i64 }">
+    %436 = llvm.mul %435, %422 : !llvm.i64
+    %437 = llvm.add %434, %436 : !llvm.i64
+    %438 = llvm.extractvalue %33[0] : !llvm<"{ i64, i64, i64 }">
+    %439 = llvm.mul %438, %423 : !llvm.i64
+    %440 = llvm.add %437, %439 : !llvm.i64
+    %441 = llvm.extractvalue %19[0] : !llvm<"{ i64, i64, i64 }">
+    %442 = llvm.mul %441, %424 : !llvm.i64
+    %443 = llvm.add %440, %442 : !llvm.i64
+    %444 = llvm.mul %322, %425 : !llvm.i64
+    %445 = llvm.add %443, %444 : !llvm.i64
+    %446 = llvm.extractvalue %59[0] : !llvm<"{ i64, i64, i64 }">
+    %447 = llvm.mul %446, %426 : !llvm.i64
+    %448 = llvm.add %445, %447 : !llvm.i64
+    %449 = llvm.extractvalue %44[0] : !llvm<"{ i64, i64, i64 }">
+    %450 = llvm.mul %449, %427 : !llvm.i64
+    %451 = llvm.add %448, %450 : !llvm.i64
+    %452 = llvm.extractvalue %29[0] : !llvm<"{ i64, i64, i64 }">
+    %453 = llvm.mul %452, %428 : !llvm.i64
+    %454 = llvm.add %451, %453 : !llvm.i64
+    %455 = llvm.insertvalue %454, %419[1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %456 = llvm.extractvalue %415[0] : !llvm.i64
+    %457 = llvm.extractvalue %415[1] : !llvm.i64
+    %458 = llvm.sub %457, %456 : !llvm.i64
+    %459 = llvm.insertvalue %458, %455[2, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %460 = llvm.extractvalue %63[0] : !llvm<"{ i64, i64, i64 }">
+    %461 = llvm.extractvalue %63[1] : !llvm<"{ i64, i64, i64 }">
+    %462 = llvm.sub %461, %460 : !llvm.i64
+    %463 = llvm.insertvalue %462, %459[2, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %464 = llvm.extractvalue %48[0] : !llvm<"{ i64, i64, i64 }">
+    %465 = llvm.extractvalue %48[1] : !llvm<"{ i64, i64, i64 }">
+    %466 = llvm.sub %465, %464 : !llvm.i64
+    %467 = llvm.insertvalue %466, %463[2, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %468 = llvm.extractvalue %33[0] : !llvm<"{ i64, i64, i64 }">
+    %469 = llvm.extractvalue %33[1] : !llvm<"{ i64, i64, i64 }">
+    %470 = llvm.sub %469, %468 : !llvm.i64
+    %471 = llvm.insertvalue %470, %467[2, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %472 = llvm.extractvalue %19[0] : !llvm<"{ i64, i64, i64 }">
+    %473 = llvm.extractvalue %19[1] : !llvm<"{ i64, i64, i64 }">
+    %474 = llvm.sub %473, %472 : !llvm.i64
+    %475 = llvm.insertvalue %474, %471[2, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %476 = llvm.extractvalue %322[0] : !llvm.i64
+    %477 = llvm.extractvalue %322[1] : !llvm.i64
+    %478 = llvm.sub %477, %476 : !llvm.i64
+    %479 = llvm.insertvalue %478, %475[2, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %480 = llvm.extractvalue %59[0] : !llvm<"{ i64, i64, i64 }">
+    %481 = llvm.extractvalue %59[1] : !llvm<"{ i64, i64, i64 }">
+    %482 = llvm.sub %481, %480 : !llvm.i64
+    %483 = llvm.insertvalue %482, %479[2, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %484 = llvm.extractvalue %63[2] : !llvm<"{ i64, i64, i64 }">
+    %485 = llvm.mul %421, %484 : !llvm.i64
+    %486 = llvm.insertvalue %485, %483[3, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %487 = llvm.extractvalue %48[2] : !llvm<"{ i64, i64, i64 }">
+    %488 = llvm.mul %422, %487 : !llvm.i64
+    %489 = llvm.insertvalue %488, %486[3, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %490 = llvm.extractvalue %33[2] : !llvm<"{ i64, i64, i64 }">
+    %491 = llvm.mul %423, %490 : !llvm.i64
+    %492 = llvm.insertvalue %491, %489[3, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %493 = llvm.extractvalue %19[2] : !llvm<"{ i64, i64, i64 }">
+    %494 = llvm.mul %424, %493 : !llvm.i64
+    %495 = llvm.insertvalue %494, %492[3, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %496 = llvm.extractvalue %59[2] : !llvm<"{ i64, i64, i64 }">
+    %497 = llvm.mul %426, %496 : !llvm.i64
+    %498 = llvm.insertvalue %497, %495[3, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %499 = llvm.extractvalue %44[2] : !llvm<"{ i64, i64, i64 }">
+    %500 = llvm.mul %427, %499 : !llvm.i64
+    %501 = llvm.insertvalue %500, %498[3, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %502 = llvm.extractvalue %29[2] : !llvm<"{ i64, i64, i64 }">
+    %503 = llvm.mul %428, %502 : !llvm.i64
+    %504 = llvm.insertvalue %503, %501[3, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %505 = llvm.call @packA(%504) : (!llvm<"{ double*, i64, [7 x i64], [7 x i64] }">) -> !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    llvm.br ^bb7(%15 : !llvm.i64)
+  ^bb7(%506: !llvm.i64):	// 2 preds: ^bb6, ^bb38
+    %507 = llvm.icmp "slt" %506, %53 : !llvm.i64
+    llvm.cond_br %507, ^bb8, ^bb39
+  ^bb8:	// pred: ^bb7
+    llvm.br ^bb9(%15 : !llvm.i64)
+  ^bb9(%508: !llvm.i64):	// 2 preds: ^bb8, ^bb37
+    %509 = llvm.icmp "slt" %508, %54 : !llvm.i64
+    llvm.cond_br %509, ^bb10, ^bb38
+  ^bb10:	// pred: ^bb9
+    llvm.br ^bb11(%15 : !llvm.i64)
+  ^bb11(%510: !llvm.i64):	// 2 preds: ^bb10, ^bb36
+    %511 = llvm.icmp "slt" %510, %55 : !llvm.i64
+    llvm.cond_br %511, ^bb12, ^bb37
+  ^bb12:	// pred: ^bb11
+    llvm.br ^bb13(%15 : !llvm.i64)
+  ^bb13(%512: !llvm.i64):	// 2 preds: ^bb12, ^bb35
+    %513 = llvm.icmp "slt" %512, %38 : !llvm.i64
+    llvm.cond_br %513, ^bb14, ^bb36
+  ^bb14:	// pred: ^bb13
+    llvm.br ^bb15(%15 : !llvm.i64)
+  ^bb15(%514: !llvm.i64):	// 2 preds: ^bb14, ^bb34
+    %515 = llvm.icmp "slt" %514, %40 : !llvm.i64
+    llvm.cond_br %515, ^bb16, ^bb35
+  ^bb16:	// pred: ^bb15
+    llvm.br ^bb17(%15 : !llvm.i64)
+  ^bb17(%516: !llvm.i64):	// 2 preds: ^bb16, ^bb33
+    %517 = llvm.icmp "slt" %516, %39 : !llvm.i64
+    llvm.cond_br %517, ^bb18, ^bb34
+  ^bb18:	// pred: ^bb17
+    llvm.br ^bb19(%15 : !llvm.i64)
+  ^bb19(%518: !llvm.i64):	// 2 preds: ^bb18, ^bb32
+    %519 = llvm.icmp "slt" %518, %40 : !llvm.i64
+    llvm.cond_br %519, ^bb20, ^bb33
+  ^bb20:	// pred: ^bb19
+    llvm.br ^bb21(%15 : !llvm.i64)
+  ^bb21(%520: !llvm.i64):	// 2 preds: ^bb20, ^bb31
+    %521 = llvm.icmp "slt" %520, %39 : !llvm.i64
+    llvm.cond_br %521, ^bb22, ^bb32
+  ^bb22:	// pred: ^bb21
+    %522 = llvm.undef : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %523 = llvm.extractvalue %505[0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %524 = llvm.insertvalue %523, %522[0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %525 = llvm.extractvalue %505[3, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %526 = llvm.extractvalue %505[3, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %527 = llvm.extractvalue %505[3, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %528 = llvm.extractvalue %505[3, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %529 = llvm.extractvalue %505[3, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %530 = llvm.extractvalue %505[3, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %531 = llvm.extractvalue %505[3, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %532 = llvm.extractvalue %505[1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %533 = llvm.mul %506, %525 : !llvm.i64
+    %534 = llvm.add %532, %533 : !llvm.i64
+    %535 = llvm.mul %508, %526 : !llvm.i64
+    %536 = llvm.add %534, %535 : !llvm.i64
+    %537 = llvm.mul %512, %527 : !llvm.i64
+    %538 = llvm.add %536, %537 : !llvm.i64
+    %539 = llvm.mul %516, %528 : !llvm.i64
+    %540 = llvm.add %538, %539 : !llvm.i64
+    %541 = llvm.mul %520, %529 : !llvm.i64
+    %542 = llvm.add %540, %541 : !llvm.i64
+    %543 = llvm.extractvalue %29[0] : !llvm<"{ i64, i64, i64 }">
+    %544 = llvm.mul %543, %530 : !llvm.i64
+    %545 = llvm.add %542, %544 : !llvm.i64
+    %546 = llvm.extractvalue %19[0] : !llvm<"{ i64, i64, i64 }">
+    %547 = llvm.mul %546, %531 : !llvm.i64
+    %548 = llvm.add %545, %547 : !llvm.i64
+    %549 = llvm.insertvalue %548, %524[1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %550 = llvm.extractvalue %506[0] : !llvm.i64
+    %551 = llvm.extractvalue %506[1] : !llvm.i64
+    %552 = llvm.sub %551, %550 : !llvm.i64
+    %553 = llvm.insertvalue %552, %549[2, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %554 = llvm.extractvalue %508[0] : !llvm.i64
+    %555 = llvm.extractvalue %508[1] : !llvm.i64
+    %556 = llvm.sub %555, %554 : !llvm.i64
+    %557 = llvm.insertvalue %556, %553[2, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %558 = llvm.extractvalue %29[2] : !llvm<"{ i64, i64, i64 }">
+    %559 = llvm.mul %530, %558 : !llvm.i64
+    %560 = llvm.insertvalue %559, %557[3, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %561 = llvm.extractvalue %19[2] : !llvm<"{ i64, i64, i64 }">
+    %562 = llvm.mul %531, %561 : !llvm.i64
+    %563 = llvm.insertvalue %562, %560[3, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %564 = llvm.undef : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %565 = llvm.extractvalue %414[0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %566 = llvm.insertvalue %565, %564[0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %567 = llvm.extractvalue %414[3, 0] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %568 = llvm.extractvalue %414[3, 1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %569 = llvm.extractvalue %414[3, 2] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %570 = llvm.extractvalue %414[3, 3] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %571 = llvm.extractvalue %414[3, 4] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %572 = llvm.extractvalue %414[3, 5] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %573 = llvm.extractvalue %414[3, 6] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %574 = llvm.extractvalue %414[1] : !llvm<"{ double*, i64, [7 x i64], [7 x i64] }">
+    %575 = llvm.mul %506, %567 : !llvm.i64
+    %576 = llvm.add %574, %575 : !llvm.i64
+    %577 = llvm.mul %510, %568 : !llvm.i64
+    %578 = llvm.add %576, %577 : !llvm.i64
+    %579 = llvm.mul %512, %569 : !llvm.i64
+    %580 = llvm.add %578, %579 : !llvm.i64
+    %581 = llvm.mul %514, %570 : !llvm.i64
+    %582 = llvm.add %580, %581 : !llvm.i64
+    %583 = llvm.mul %518, %571 : !llvm.i64
+    %584 = llvm.add %582, %583 : !llvm.i64
+    %585 = llvm.extractvalue %29[0] : !llvm<"{ i64, i64, i64 }">
+    %586 = llvm.mul %585, %572 : !llvm.i64
+    %587 = llvm.add %584, %586 : !llvm.i64
+    %588 = llvm.extractvalue %23[0] : !llvm<"{ i64, i64, i64 }">
+    %589 = llvm.mul %588, %573 : !llvm.i64
+    %590 = llvm.add %587, %589 : !llvm.i64
+    %591 = llvm.insertvalue %590, %566[1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %592 = llvm.extractvalue %506[0] : !llvm.i64
+    %593 = llvm.extractvalue %506[1] : !llvm.i64
+    %594 = llvm.sub %593, %592 : !llvm.i64
+    %595 = llvm.insertvalue %594, %591[2, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %596 = llvm.extractvalue %510[0] : !llvm.i64
+    %597 = llvm.extractvalue %510[1] : !llvm.i64
+    %598 = llvm.sub %597, %596 : !llvm.i64
+    %599 = llvm.insertvalue %598, %595[2, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %600 = llvm.extractvalue %29[2] : !llvm<"{ i64, i64, i64 }">
+    %601 = llvm.mul %572, %600 : !llvm.i64
+    %602 = llvm.insertvalue %601, %599[3, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %603 = llvm.extractvalue %23[2] : !llvm<"{ i64, i64, i64 }">
+    %604 = llvm.mul %573, %603 : !llvm.i64
+    %605 = llvm.insertvalue %604, %602[3, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %606 = llvm.undef : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %607 = llvm.extractvalue %321[0] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %608 = llvm.insertvalue %607, %606[0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %609 = llvm.extractvalue %321[3, 0] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %610 = llvm.extractvalue %321[3, 1] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %611 = llvm.extractvalue %321[3, 2] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %612 = llvm.extractvalue %321[3, 3] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %613 = llvm.extractvalue %321[3, 4] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %614 = llvm.extractvalue %321[3, 5] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %615 = llvm.extractvalue %321[3, 6] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %616 = llvm.extractvalue %321[3, 7] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %617 = llvm.extractvalue %321[3, 8] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %618 = llvm.extractvalue %321[3, 9] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %619 = llvm.extractvalue %321[1] : !llvm<"{ double*, i64, [10 x i64], [10 x i64] }">
+    %620 = llvm.mul %415, %609 : !llvm.i64
+    %621 = llvm.add %619, %620 : !llvm.i64
+    %622 = llvm.mul %508, %610 : !llvm.i64
+    %623 = llvm.add %621, %622 : !llvm.i64
+    %624 = llvm.mul %516, %611 : !llvm.i64
+    %625 = llvm.add %623, %624 : !llvm.i64
+    %626 = llvm.mul %520, %612 : !llvm.i64
+    %627 = llvm.add %625, %626 : !llvm.i64
+    %628 = llvm.extractvalue %19[0] : !llvm<"{ i64, i64, i64 }">
+    %629 = llvm.mul %628, %613 : !llvm.i64
+    %630 = llvm.add %627, %629 : !llvm.i64
+    %631 = llvm.mul %324, %614 : !llvm.i64
+    %632 = llvm.add %630, %631 : !llvm.i64
+    %633 = llvm.mul %510, %615 : !llvm.i64
+    %634 = llvm.add %632, %633 : !llvm.i64
+    %635 = llvm.mul %514, %616 : !llvm.i64
+    %636 = llvm.add %634, %635 : !llvm.i64
+    %637 = llvm.mul %518, %617 : !llvm.i64
+    %638 = llvm.add %636, %637 : !llvm.i64
+    %639 = llvm.extractvalue %23[0] : !llvm<"{ i64, i64, i64 }">
+    %640 = llvm.mul %639, %618 : !llvm.i64
+    %641 = llvm.add %638, %640 : !llvm.i64
+    %642 = llvm.insertvalue %641, %608[1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %643 = llvm.extractvalue %415[0] : !llvm.i64
+    %644 = llvm.extractvalue %415[1] : !llvm.i64
+    %645 = llvm.sub %644, %643 : !llvm.i64
+    %646 = llvm.insertvalue %645, %642[2, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %647 = llvm.extractvalue %508[0] : !llvm.i64
+    %648 = llvm.extractvalue %508[1] : !llvm.i64
+    %649 = llvm.sub %648, %647 : !llvm.i64
+    %650 = llvm.insertvalue %649, %646[2, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %651 = llvm.extractvalue %19[2] : !llvm<"{ i64, i64, i64 }">
+    %652 = llvm.mul %613, %651 : !llvm.i64
+    %653 = llvm.insertvalue %652, %650[3, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %654 = llvm.extractvalue %23[2] : !llvm<"{ i64, i64, i64 }">
+    %655 = llvm.mul %618, %654 : !llvm.i64
+    %656 = llvm.insertvalue %655, %653[3, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %657 = llvm.extractvalue %563[2, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %658 = llvm.extractvalue %563[2, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %659 = llvm.extractvalue %605[2, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %660 = llvm.extractvalue %605[2, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %661 = llvm.extractvalue %656[2, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %662 = llvm.extractvalue %656[2, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %663 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %664 = llvm.insertvalue %0, %663[0] : !llvm<"{ i64, i64, i64 }">
+    %665 = llvm.insertvalue %657, %664[1] : !llvm<"{ i64, i64, i64 }">
+    %666 = llvm.insertvalue %1, %665[2] : !llvm<"{ i64, i64, i64 }">
+    %667 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %668 = llvm.insertvalue %0, %667[0] : !llvm<"{ i64, i64, i64 }">
+    %669 = llvm.insertvalue %660, %668[1] : !llvm<"{ i64, i64, i64 }">
+    %670 = llvm.insertvalue %1, %669[2] : !llvm<"{ i64, i64, i64 }">
+    %671 = llvm.undef : !llvm<"{ i64, i64, i64 }">
+    %672 = llvm.insertvalue %0, %671[0] : !llvm<"{ i64, i64, i64 }">
+    %673 = llvm.insertvalue %658, %672[1] : !llvm<"{ i64, i64, i64 }">
+    %674 = llvm.insertvalue %1, %673[2] : !llvm<"{ i64, i64, i64 }">
+    llvm.br ^bb23(%0 : !llvm.i64)
+  ^bb23(%675: !llvm.i64):	// 2 preds: ^bb22, ^bb30
+    %676 = llvm.icmp "slt" %675, %657 : !llvm.i64
+    llvm.cond_br %676, ^bb24, ^bb31
+  ^bb24:	// pred: ^bb23
+    llvm.br ^bb25(%0 : !llvm.i64)
+  ^bb25(%677: !llvm.i64):	// 2 preds: ^bb24, ^bb29
+    %678 = llvm.icmp "slt" %677, %660 : !llvm.i64
+    llvm.cond_br %678, ^bb26, ^bb30
+  ^bb26:	// pred: ^bb25
+    llvm.br ^bb27(%0 : !llvm.i64)
+  ^bb27(%679: !llvm.i64):	// 2 preds: ^bb26, ^bb28
+    %680 = llvm.icmp "slt" %679, %658 : !llvm.i64
+    llvm.cond_br %680, ^bb28, ^bb29
+  ^bb28:	// pred: ^bb27
+    %681 = llvm.extractvalue %605[0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %682 = llvm.extractvalue %605[1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %683 = llvm.extractvalue %605[3, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %684 = llvm.mul %679, %683 : !llvm.i64
+    %685 = llvm.add %682, %684 : !llvm.i64
+    %686 = llvm.extractvalue %605[3, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %687 = llvm.mul %677, %686 : !llvm.i64
+    %688 = llvm.add %685, %687 : !llvm.i64
+    %689 = llvm.getelementptr %681[%688] : (!llvm<"double*">, !llvm.i64) -> !llvm<"double*">
+    %690 = llvm.load %689 : !llvm<"double*">
+    %691 = llvm.extractvalue %563[0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %692 = llvm.extractvalue %563[1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %693 = llvm.extractvalue %563[3, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %694 = llvm.mul %675, %693 : !llvm.i64
+    %695 = llvm.add %692, %694 : !llvm.i64
+    %696 = llvm.extractvalue %563[3, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %697 = llvm.mul %679, %696 : !llvm.i64
+    %698 = llvm.add %695, %697 : !llvm.i64
+    %699 = llvm.getelementptr %691[%698] : (!llvm<"double*">, !llvm.i64) -> !llvm<"double*">
+    %700 = llvm.load %699 : !llvm<"double*">
+    %701 = llvm.fmul %700, %690 : !llvm.double
+    %702 = llvm.extractvalue %656[0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %703 = llvm.extractvalue %656[1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %704 = llvm.extractvalue %656[3, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %705 = llvm.mul %675, %704 : !llvm.i64
+    %706 = llvm.add %703, %705 : !llvm.i64
+    %707 = llvm.extractvalue %656[3, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %708 = llvm.mul %677, %707 : !llvm.i64
+    %709 = llvm.add %706, %708 : !llvm.i64
+    %710 = llvm.getelementptr %702[%709] : (!llvm<"double*">, !llvm.i64) -> !llvm<"double*">
+    %711 = llvm.load %710 : !llvm<"double*">
+    %712 = llvm.fadd %711, %701 : !llvm.double
+    %713 = llvm.extractvalue %656[0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %714 = llvm.extractvalue %656[1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %715 = llvm.extractvalue %656[3, 0] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %716 = llvm.mul %675, %715 : !llvm.i64
+    %717 = llvm.add %714, %716 : !llvm.i64
+    %718 = llvm.extractvalue %656[3, 1] : !llvm<"{ double*, i64, [2 x i64], [2 x i64] }">
+    %719 = llvm.mul %677, %718 : !llvm.i64
+    %720 = llvm.add %717, %719 : !llvm.i64
+    %721 = llvm.getelementptr %713[%720] : (!llvm<"double*">, !llvm.i64) -> !llvm<"double*">
+    llvm.store %712, %721 : !llvm<"double*">
+    %722 = llvm.add %679, %1 : !llvm.i64
+    llvm.br ^bb27(%722 : !llvm.i64)
+  ^bb29:	// pred: ^bb27
+    %723 = llvm.add %677, %1 : !llvm.i64
+    llvm.br ^bb25(%723 : !llvm.i64)
+  ^bb30:	// pred: ^bb25
+    %724 = llvm.add %675, %1 : !llvm.i64
+    llvm.br ^bb23(%724 : !llvm.i64)
+  ^bb31:	// pred: ^bb23
+    %725 = llvm.add %520, %14 : !llvm.i64
+    llvm.br ^bb21(%725 : !llvm.i64)
+  ^bb32:	// pred: ^bb21
+    %726 = llvm.add %518, %14 : !llvm.i64
+    llvm.br ^bb19(%726 : !llvm.i64)
+  ^bb33:	// pred: ^bb19
+    %727 = llvm.add %516, %14 : !llvm.i64
+    llvm.br ^bb17(%727 : !llvm.i64)
+  ^bb34:	// pred: ^bb17
+    %728 = llvm.add %514, %14 : !llvm.i64
+    llvm.br ^bb15(%728 : !llvm.i64)
+  ^bb35:	// pred: ^bb15
+    %729 = llvm.add %512, %14 : !llvm.i64
+    llvm.br ^bb13(%729 : !llvm.i64)
+  ^bb36:	// pred: ^bb13
+    %730 = llvm.add %510, %14 : !llvm.i64
+    llvm.br ^bb11(%730 : !llvm.i64)
+  ^bb37:	// pred: ^bb11
+    %731 = llvm.add %508, %14 : !llvm.i64
+    llvm.br ^bb9(%731 : !llvm.i64)
+  ^bb38:	// pred: ^bb9
+    %732 = llvm.add %506, %14 : !llvm.i64
+    llvm.br ^bb7(%732 : !llvm.i64)
+  ^bb39:	// pred: ^bb7
+    %733 = llvm.add %415, %14 : !llvm.i64
+    llvm.br ^bb5(%733 : !llvm.i64)
+  ^bb40:	// pred: ^bb5
+    %734 = llvm.add %324, %14 : !llvm.i64
+    llvm.br ^bb3(%734 : !llvm.i64)
+  ^bb41:	// pred: ^bb3
+    %735 = llvm.add %322, %14 : !llvm.i64
+    llvm.br ^bb1(%735 : !llvm.i64)
+  ^bb42:	// pred: ^bb1
+    llvm.return
+  }
+  func @malloc(!llvm.i64) -> !llvm<"i8*">
+}

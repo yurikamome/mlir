@@ -1,0 +1,272 @@
+
+
+module {
+  func @debugs() {
+    return
+  }
+  func @packA(%arg0: !linalg.view<?x?x?x?x?x?x?xf64>) -> !linalg.view<?x?x?x?x?x?x?xf64> {
+    %c0 = constant 0 : index
+    %c1 = constant 1 : index
+    %c768 = constant 768 : index
+    %c6 = constant 6 : index
+    %c8 = constant 8 : index
+    %c256 = constant 256 : index
+    %c6_0 = constant 6 : index
+    %c8_1 = constant 8 : index
+    %c256_2 = constant 256 : index
+    %c96 = constant 96 : index
+    %c8_3 = constant 8 : index
+    %c256_4 = constant 256 : index
+    %c96_5 = constant 96 : index
+    %c768_6 = constant 768 : index
+    %c1_7 = constant 1 : index
+    %c0_8 = constant 0 : index
+    %0 = linalg.range %c0_8:%c6:%c1_7 : !linalg.range
+    %1 = linalg.range %c0_8:%c8:%c1_7 : !linalg.range
+    %2 = divis %c6_0, %c6 : index
+    %3 = divis %c8_1, %c8 : index
+    %4 = linalg.range %c0_8:%c256:%c1_7 : !linalg.range
+    %5 = linalg.range %c0_8:%2:%c1_7 : !linalg.range
+    %6 = linalg.range %c0_8:%3:%c1_7 : !linalg.range
+    %7 = divis %c256_2, %c256 : index
+    %8 = divis %c96, %c6_0 : index
+    %9 = divis %c8_3, %c8_1 : index
+    %10 = linalg.range %c0_8:%7:%c1_7 : !linalg.range
+    %11 = linalg.range %c0_8:%8:%c1_7 : !linalg.range
+    %12 = linalg.range %c0_8:%9:%c1_7 : !linalg.range
+    %13 = divis %c256_4, %c256_2 : index
+    %14 = divis %c96_5, %c96 : index
+    %15 = divis %c768_6, %c8_3 : index
+    %16 = linalg.range %c0_8:%13:%c1_7 : !linalg.range
+    %17 = linalg.range %c0_8:%14:%c1_7 : !linalg.range
+    %18 = linalg.range %c0_8:%15:%c1_7 : !linalg.range
+    %19 = divis %c768, %c256_4 : index
+    %20 = divis %c768, %c96_5 : index
+    %21 = divis %c768, %c768_6 : index
+    %22 = linalg.range %c0_8:%19:%c1_7 : !linalg.range
+    %23 = linalg.range %c0_8:%20:%c1_7 : !linalg.range
+    %24 = linalg.range %c0_8:%21:%c1_7 : !linalg.range
+    %25 = linalg.buffer_alloc  : !linalg.buffer<24576xf64>
+    %26 = linalg.view %25[%17, %11, %5, %0, %16, %10, %4] : !linalg.buffer<24576xf64> -> !linalg.view<?x?x?x?x?x?x?xf64>
+    %27 = linalg.dim %arg0, 0 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %28 = linalg.dim %arg0, 1 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %29 = linalg.dim %arg0, 2 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %30 = linalg.dim %arg0, 3 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %31 = linalg.dim %arg0, 4 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %32 = linalg.dim %arg0, 5 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %33 = linalg.dim %arg0, 6 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %34 = linalg.dim %26, 0 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %35 = linalg.dim %26, 1 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %36 = linalg.dim %26, 2 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %37 = linalg.dim %26, 3 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %38 = linalg.dim %26, 4 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %39 = linalg.dim %26, 5 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %40 = linalg.dim %26, 6 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %41 = linalg.range %c0:%27:%c1 : !linalg.range
+    %42 = linalg.range %c0:%28:%c1 : !linalg.range
+    %43 = linalg.range %c0:%29:%c1 : !linalg.range
+    %44 = linalg.range %c0:%30:%c1 : !linalg.range
+    %45 = linalg.range %c0:%31:%c1 : !linalg.range
+    %46 = linalg.range %c0:%32:%c1 : !linalg.range
+    %47 = linalg.range %c0:%33:%c1 : !linalg.range
+    loop.for %arg1 = %c0 to %27 step %c1 {
+      loop.for %arg2 = %c0 to %28 step %c1 {
+        loop.for %arg3 = %c0 to %29 step %c1 {
+          loop.for %arg4 = %c0 to %30 step %c1 {
+            loop.for %arg5 = %c0 to %31 step %c1 {
+              loop.for %arg6 = %c0 to %32 step %c1 {
+                loop.for %arg7 = %c0 to %33 step %c1 {
+                  %48 = linalg.load %arg0[%arg1, %arg2, %arg3, %arg4, %arg5, %arg6, %arg7] : !linalg.view<?x?x?x?x?x?x?xf64>
+                  linalg.store %48, %26[%arg5, %arg1, %arg6, %arg2, %arg3, %arg7, %arg4] : !linalg.view<?x?x?x?x?x?x?xf64>
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    return %26 : !linalg.view<?x?x?x?x?x?x?xf64>
+  }
+  func @packB(%arg0: !linalg.view<?x?x?x?x?x?x?xf64>) -> !linalg.view<?x?x?x?x?x?x?xf64> {
+    %c0 = constant 0 : index
+    %c1 = constant 1 : index
+    %c768 = constant 768 : index
+    %c6 = constant 6 : index
+    %c8 = constant 8 : index
+    %c256 = constant 256 : index
+    %c6_0 = constant 6 : index
+    %c8_1 = constant 8 : index
+    %c256_2 = constant 256 : index
+    %c96 = constant 96 : index
+    %c8_3 = constant 8 : index
+    %c256_4 = constant 256 : index
+    %c96_5 = constant 96 : index
+    %c768_6 = constant 768 : index
+    %c1_7 = constant 1 : index
+    %c0_8 = constant 0 : index
+    %0 = linalg.range %c0_8:%c6:%c1_7 : !linalg.range
+    %1 = linalg.range %c0_8:%c8:%c1_7 : !linalg.range
+    %2 = divis %c6_0, %c6 : index
+    %3 = divis %c8_1, %c8 : index
+    %4 = linalg.range %c0_8:%c256:%c1_7 : !linalg.range
+    %5 = linalg.range %c0_8:%2:%c1_7 : !linalg.range
+    %6 = linalg.range %c0_8:%3:%c1_7 : !linalg.range
+    %7 = divis %c256_2, %c256 : index
+    %8 = divis %c96, %c6_0 : index
+    %9 = divis %c8_3, %c8_1 : index
+    %10 = linalg.range %c0_8:%7:%c1_7 : !linalg.range
+    %11 = linalg.range %c0_8:%8:%c1_7 : !linalg.range
+    %12 = linalg.range %c0_8:%9:%c1_7 : !linalg.range
+    %13 = divis %c256_4, %c256_2 : index
+    %14 = divis %c96_5, %c96 : index
+    %15 = divis %c768_6, %c8_3 : index
+    %16 = linalg.range %c0_8:%13:%c1_7 : !linalg.range
+    %17 = linalg.range %c0_8:%14:%c1_7 : !linalg.range
+    %18 = linalg.range %c0_8:%15:%c1_7 : !linalg.range
+    %19 = divis %c768, %c256_4 : index
+    %20 = divis %c768, %c96_5 : index
+    %21 = divis %c768, %c768_6 : index
+    %22 = linalg.range %c0_8:%19:%c1_7 : !linalg.range
+    %23 = linalg.range %c0_8:%20:%c1_7 : !linalg.range
+    %24 = linalg.range %c0_8:%21:%c1_7 : !linalg.range
+    %25 = linalg.buffer_alloc  : !linalg.buffer<196608xf64>
+    %26 = linalg.view %25[%18, %12, %6, %1, %16, %10, %4] : !linalg.buffer<196608xf64> -> !linalg.view<?x?x?x?x?x?x?xf64>
+    %27 = linalg.dim %arg0, 0 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %28 = linalg.dim %arg0, 1 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %29 = linalg.dim %arg0, 2 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %30 = linalg.dim %arg0, 3 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %31 = linalg.dim %arg0, 4 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %32 = linalg.dim %arg0, 5 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %33 = linalg.dim %arg0, 6 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %34 = linalg.dim %26, 0 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %35 = linalg.dim %26, 1 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %36 = linalg.dim %26, 2 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %37 = linalg.dim %26, 3 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %38 = linalg.dim %26, 4 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %39 = linalg.dim %26, 5 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %40 = linalg.dim %26, 6 : !linalg.view<?x?x?x?x?x?x?xf64>
+    %41 = linalg.range %c0:%27:%c1 : !linalg.range
+    %42 = linalg.range %c0:%28:%c1 : !linalg.range
+    %43 = linalg.range %c0:%29:%c1 : !linalg.range
+    %44 = linalg.range %c0:%30:%c1 : !linalg.range
+    %45 = linalg.range %c0:%31:%c1 : !linalg.range
+    %46 = linalg.range %c0:%32:%c1 : !linalg.range
+    %47 = linalg.range %c0:%33:%c1 : !linalg.range
+    loop.for %arg1 = %c0 to %27 step %c1 {
+      loop.for %arg2 = %c0 to %28 step %c1 {
+        loop.for %arg3 = %c0 to %29 step %c1 {
+          loop.for %arg4 = %c0 to %30 step %c1 {
+            loop.for %arg5 = %c0 to %31 step %c1 {
+              loop.for %arg6 = %c0 to %32 step %c1 {
+                loop.for %arg7 = %c0 to %33 step %c1 {
+                  %48 = linalg.load %arg0[%arg1, %arg2, %arg3, %arg4, %arg5, %arg6, %arg7] : !linalg.view<?x?x?x?x?x?x?xf64>
+                  linalg.store %48, %26[%arg5, %arg1, %arg6, %arg2, %arg3, %arg7, %arg4] : !linalg.view<?x?x?x?x?x?x?xf64>
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    return %26 : !linalg.view<?x?x?x?x?x?x?xf64>
+  }
+  func @tilegemm(%arg0: !linalg.buffer<589824xf64>, %arg1: !linalg.buffer<589824xf64>, %arg2: !linalg.buffer<589824xf64>) {
+    %c0 = constant 0 : index
+    %c1 = constant 1 : index
+    %c768 = constant 768 : index
+    %c6 = constant 6 : index
+    %c8 = constant 8 : index
+    %c256 = constant 256 : index
+    %c6_0 = constant 6 : index
+    %c8_1 = constant 8 : index
+    %c256_2 = constant 256 : index
+    %c96 = constant 96 : index
+    %c8_3 = constant 8 : index
+    %c256_4 = constant 256 : index
+    %c96_5 = constant 96 : index
+    %c768_6 = constant 768 : index
+    %c1_7 = constant 1 : index
+    %c0_8 = constant 0 : index
+    %0 = linalg.range %c0_8:%c6:%c1_7 : !linalg.range
+    %1 = linalg.range %c0_8:%c8:%c1_7 : !linalg.range
+    %2 = divis %c6_0, %c6 : index
+    %3 = divis %c8_1, %c8 : index
+    %4 = linalg.range %c0_8:%c256:%c1_7 : !linalg.range
+    %5 = linalg.range %c0_8:%2:%c1_7 : !linalg.range
+    %6 = linalg.range %c0_8:%3:%c1_7 : !linalg.range
+    %7 = divis %c256_2, %c256 : index
+    %8 = divis %c96, %c6_0 : index
+    %9 = divis %c8_3, %c8_1 : index
+    %10 = linalg.range %c0_8:%7:%c1_7 : !linalg.range
+    %11 = linalg.range %c0_8:%8:%c1_7 : !linalg.range
+    %12 = linalg.range %c0_8:%9:%c1_7 : !linalg.range
+    %13 = divis %c256_4, %c256_2 : index
+    %14 = divis %c96_5, %c96 : index
+    %15 = divis %c768_6, %c8_3 : index
+    %16 = linalg.range %c0_8:%13:%c1_7 : !linalg.range
+    %17 = linalg.range %c0_8:%14:%c1_7 : !linalg.range
+    %18 = linalg.range %c0_8:%15:%c1_7 : !linalg.range
+    %19 = divis %c768, %c256_4 : index
+    %20 = divis %c768, %c96_5 : index
+    %21 = divis %c768, %c768_6 : index
+    %22 = linalg.range %c0_8:%19:%c1_7 : !linalg.range
+    %23 = linalg.range %c0_8:%20:%c1_7 : !linalg.range
+    %24 = linalg.range %c0_8:%21:%c1_7 : !linalg.range
+    %25 = linalg.view %arg0[%23, %17, %11, %5, %0, %22, %16, %10, %4] : !linalg.buffer<589824xf64> -> !linalg.view<?x?x?x?x?x?x?x?x?xf64>
+    %26 = linalg.view %arg1[%24, %18, %12, %6, %1, %22, %16, %10, %4] : !linalg.buffer<589824xf64> -> !linalg.view<?x?x?x?x?x?x?x?x?xf64>
+    %27 = linalg.view %arg2[%23, %17, %11, %5, %0, %24, %18, %12, %6, %1] : !linalg.buffer<589824xf64> -> !linalg.view<?x?x?x?x?x?x?x?x?x?xf64>
+    loop.for %arg3 = %c0_8 to %19 step %c1_7 {
+      loop.for %arg4 = %c0_8 to %21 step %c1_7 {
+        call @debugs() : () -> ()
+        %28 = linalg.slice %26[%arg4, %18, %12, %6, %1, %arg3, %16, %10, %4] : !linalg.view<?x?x?x?x?x?x?x?x?xf64>, index, !linalg.range, !linalg.range, !linalg.range, !linalg.range, index, !linalg.range, !linalg.range, !linalg.range, !linalg.view<?x?x?x?x?x?x?xf64>
+        call @debugs() : () -> ()
+        %29 = call @packB(%28) : (!linalg.view<?x?x?x?x?x?x?xf64>) -> !linalg.view<?x?x?x?x?x?x?xf64>
+        loop.for %arg5 = %c0_8 to %20 step %c1_7 {
+          %30 = linalg.slice %25[%arg5, %17, %11, %5, %0, %arg3, %16, %10, %4] : !linalg.view<?x?x?x?x?x?x?x?x?xf64>, index, !linalg.range, !linalg.range, !linalg.range, !linalg.range, index, !linalg.range, !linalg.range, !linalg.range, !linalg.view<?x?x?x?x?x?x?xf64>
+          %31 = call @packA(%30) : (!linalg.view<?x?x?x?x?x?x?xf64>) -> !linalg.view<?x?x?x?x?x?x?xf64>
+          loop.for %arg6 = %c0_8 to %13 step %c1_7 {
+            loop.for %arg7 = %c0_8 to %14 step %c1_7 {
+              loop.for %arg8 = %c0_8 to %15 step %c1_7 {
+                loop.for %arg9 = %c0_8 to %7 step %c1_7 {
+                  loop.for %arg10 = %c0_8 to %9 step %c1_7 {
+                    loop.for %arg11 = %c0_8 to %8 step %c1_7 {
+                      loop.for %arg12 = %c0_8 to %9 step %c1_7 {
+                        loop.for %arg13 = %c0_8 to %8 step %c1_7 {
+                          %32 = linalg.slice %31[%arg6, %arg7, %arg9, %arg11, %arg13, %4, %0] : !linalg.view<?x?x?x?x?x?x?xf64>, index, index, index, index, index, !linalg.range, !linalg.range, !linalg.view<?x?xf64>
+                          %33 = linalg.slice %29[%arg6, %arg8, %arg9, %arg10, %arg12, %4, %1] : !linalg.view<?x?x?x?x?x?x?xf64>, index, index, index, index, index, !linalg.range, !linalg.range, !linalg.view<?x?xf64>
+                          %34 = linalg.slice %27[%arg5, %arg7, %arg11, %arg13, %0, %arg4, %arg8, %arg10, %arg12, %1] : !linalg.view<?x?x?x?x?x?x?x?x?x?xf64>, index, index, index, index, !linalg.range, index, index, index, index, !linalg.range, !linalg.view<?x?xf64>
+                          %35 = linalg.dim %32, 0 : !linalg.view<?x?xf64>
+                          %36 = linalg.dim %32, 1 : !linalg.view<?x?xf64>
+                          %37 = linalg.dim %33, 0 : !linalg.view<?x?xf64>
+                          %38 = linalg.dim %33, 1 : !linalg.view<?x?xf64>
+                          %39 = linalg.dim %34, 0 : !linalg.view<?x?xf64>
+                          %40 = linalg.dim %34, 1 : !linalg.view<?x?xf64>
+                          %41 = linalg.range %c0:%35:%c1 : !linalg.range
+                          %42 = linalg.range %c0:%38:%c1 : !linalg.range
+                          %43 = linalg.range %c0:%36:%c1 : !linalg.range
+                          loop.for %arg14 = %c0 to %35 step %c1 {
+                            loop.for %arg15 = %c0 to %38 step %c1 {
+                              loop.for %arg16 = %c0 to %36 step %c1 {
+                                %44 = linalg.load %33[%arg16, %arg15] : !linalg.view<?x?xf64>
+                                %45 = linalg.load %32[%arg14, %arg16] : !linalg.view<?x?xf64>
+                                %46 = mulf %45, %44 : f64
+                                %47 = linalg.load %34[%arg14, %arg15] : !linalg.view<?x?xf64>
+                                %48 = addf %47, %46 : f64
+                                linalg.store %48, %34[%arg14, %arg15] : !linalg.view<?x?xf64>
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    return
+  }
+}
