@@ -1,0 +1,2 @@
+./bin/mlir-opt -linalg-lower-to-loops ./tryblisgemm.mlir 
+./bin/mlir-opt  -linalg-lower-to-llvm-dialect ./gemm_align.mlir.loops | ./bin/mlir-cpu-runner -e matmul -entry-point-result=f32  -shared-libs=/home/li23/latest_mlir/llvm-project/build/lib/libcblas_interface.so > dump.txt 

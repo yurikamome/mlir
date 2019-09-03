@@ -6,5 +6,5 @@ set(LLVM_OPTIONAL_SOURCES
 add_llvm_library(cblas SHARED cblas.cpp)
 target_compile_definitions(cblas PRIVATE cblas_EXPORTS)
 add_llvm_library(cblas_interface SHARED cblas_interface.cpp)
-target_link_libraries(cblas_interface PRIVATE cblas)
-
+#target_link_libraries(cblas_interface PRIVATE cblas )
+target_link_libraries(cblas_interface PRIVATE cblas "/home/li23/latest_mlir/llvm-project/llvm/projects/mlir/test/mlir-cpu-runner/blisukr/libfoo.so")

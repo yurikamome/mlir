@@ -1,0 +1,118 @@
+
+
+module {
+  func @debugs() {
+    return
+  }
+  func @alloc_filled_f32(%arg0: index, %arg1: f32) -> !linalg.buffer<?xf32> {
+    %c0 = constant 0 : index
+    %c1 = constant 1 : index
+    %0 = linalg.buffer_alloc %arg0 {alignment = 4096 : i64} : !linalg.buffer<?xf32>
+    %1 = linalg.range %c0:%arg0:%c1 : !linalg.range
+    %2 = linalg.view %0[%1]  : !linalg.buffer<?xf32> -> !linalg.view<?xf32>
+    loop.for %arg2 = %c0 to %arg0 step %c1 {
+      linalg.store %arg1, %2[%arg2] : !linalg.view<?xf32>
+    }
+    return %0 : !linalg.buffer<?xf32>
+  }
+  func @matmul() -> f32 {
+    %cst = constant 1.000000e+01 : f32
+    %c589824 = constant 589824 : index
+    %c6 = constant 6 : index
+    %c256 = constant 256 : index
+    %c0 = constant 0 : index
+    %c49152 = constant 49152 : index
+    %c196608 = constant 196608 : index
+    %c2 = constant 2 : index
+    %c16 = constant 16 : index
+    %c48 = constant 48 : index
+    %c3 = constant 3 : index
+    %c4 = constant 4 : index
+    %c1 = constant 1 : index
+    %cst_0 = constant 1.000000e+00 : f32
+    %0 = call @alloc_filled_f32(%c589824, %cst) : (index, f32) -> !linalg.buffer<?xf32>
+    %1 = call @alloc_filled_f32(%c589824, %cst) : (index, f32) -> !linalg.buffer<?xf32>
+    %2 = call @alloc_filled_f32(%c589824, %cst) : (index, f32) -> !linalg.buffer<?xf32>
+    %3 = linalg.range %c0:%c6:%c1 : !linalg.range
+    %4 = linalg.range %c0:%c16:%c1 : !linalg.range
+    %5 = linalg.range %c0:%c256:%c1 : !linalg.range
+    %6 = linalg.range %c0:%c2:%c1 : !linalg.range
+    %7 = linalg.range %c0:%c1:%c1 : !linalg.range
+    %8 = linalg.range %c0:%c1:%c1 : !linalg.range
+    %9 = linalg.range %c0:%c16:%c1 : !linalg.range
+    %10 = linalg.range %c0:%c1:%c1 : !linalg.range
+    %11 = linalg.range %c0:%c48:%c1 : !linalg.range
+    %12 = linalg.range %c0:%c3:%c1 : !linalg.range
+    %13 = linalg.range %c0:%c4:%c1 : !linalg.range
+    %14 = linalg.range %c0:%c1:%c1 : !linalg.range
+    %15 = linalg.view %0[%13, %10, %9, %6, %3, %12, %8, %8, %5]  : !linalg.buffer<?xf32> -> !linalg.view<?x?x?x?x?x?x?x?x?xf32>
+    %16 = linalg.view %1[%14, %11, %7, %7, %4, %12, %8, %8, %5]  : !linalg.buffer<?xf32> -> !linalg.view<?x?x?x?x?x?x?x?x?xf32>
+    %17 = linalg.view %2[%13, %10, %9, %6, %3, %14, %11, %7, %7, %4]  : !linalg.buffer<?xf32> -> !linalg.view<?x?x?x?x?x?x?x?x?x?xf32>
+    loop.for %arg0 = %c0 to %c3 step %c1 {
+      loop.for %arg1 = %c0 to %c1 step %c1 {
+        %18 = linalg.slice %16[%arg1, %11, %7, %7, %4, %arg0, %8, %8, %5]  : !linalg.view<?x?x?x?x?x?x?x?x?xf32>, index, !linalg.range, !linalg.range, !linalg.range, !linalg.range, index, !linalg.range, !linalg.range, !linalg.range, !linalg.view<?x?x?x?x?x?x?xf32>
+        %19 = linalg.buffer_alloc %c196608 {alignment = 4096 : i64} : !linalg.buffer<?xf32>
+        %20 = linalg.view %19[%8, %11, %8, %7, %7, %5, %4]  : !linalg.buffer<?xf32> -> !linalg.view<?x?x?x?x?x?x?xf32>
+        loop.for %arg2 = %c0 to %c48 step %c1 {
+          loop.for %arg3 = %c0 to %c1 step %c1 {
+            loop.for %arg4 = %c0 to %c1 step %c1 {
+              loop.for %arg5 = %c0 to %c16 step %c1 {
+                loop.for %arg6 = %c0 to %c1 step %c1 {
+                  loop.for %arg7 = %c0 to %c1 step %c1 {
+                    loop.for %arg8 = %c0 to %c256 step %c1 {
+                      %21 = linalg.load %18[%arg2, %arg3, %arg4, %arg5, %arg6, %arg7, %arg8] : !linalg.view<?x?x?x?x?x?x?xf32>
+                      linalg.store %21, %20[%arg6, %arg2, %arg7, %arg3, %arg4, %arg8, %arg5] : !linalg.view<?x?x?x?x?x?x?xf32>
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        loop.for %arg2 = %c0 to %c4 step %c1 {
+          %21 = linalg.slice %15[%arg2, %10, %9, %6, %3, %arg0, %8, %8, %5]  : !linalg.view<?x?x?x?x?x?x?x?x?xf32>, index, !linalg.range, !linalg.range, !linalg.range, !linalg.range, index, !linalg.range, !linalg.range, !linalg.range, !linalg.view<?x?x?x?x?x?x?xf32>
+          %22 = linalg.buffer_alloc %c49152 {alignment = 4096 : i64} : !linalg.buffer<?xf32>
+          %23 = linalg.view %22[%8, %10, %8, %9, %6, %5, %3]  : !linalg.buffer<?xf32> -> !linalg.view<?x?x?x?x?x?x?xf32>
+          loop.for %arg3 = %c0 to %c1 step %c1 {
+            loop.for %arg4 = %c0 to %c16 step %c1 {
+              loop.for %arg5 = %c0 to %c2 step %c1 {
+                loop.for %arg6 = %c0 to %c6 step %c1 {
+                  loop.for %arg7 = %c0 to %c1 step %c1 {
+                    loop.for %arg8 = %c0 to %c1 step %c1 {
+                      loop.for %arg9 = %c0 to %c256 step %c1 {
+                        %24 = linalg.load %21[%arg3, %arg4, %arg5, %arg6, %arg7, %arg8, %arg9] : !linalg.view<?x?x?x?x?x?x?xf32>
+                        linalg.store %24, %23[%arg7, %arg3, %arg8, %arg4, %arg5, %arg9, %arg6] : !linalg.view<?x?x?x?x?x?x?xf32>
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          loop.for %arg3 = %c0 to %c1 step %c1 {
+            loop.for %arg4 = %c0 to %c1 step %c1 {
+              loop.for %arg5 = %c0 to %c48 step %c1 {
+                loop.for %arg6 = %c0 to %c1 step %c1 {
+                  loop.for %arg7 = %c0 to %c1 step %c1 {
+                    loop.for %arg8 = %c0 to %c16 step %c1 {
+                      loop.for %arg9 = %c0 to %c1 step %c1 {
+                        loop.for %arg10 = %c0 to %c2 step %c1 {
+                          %24 = linalg.slice %23[%arg3, %arg4, %arg6, %arg8, %arg10, %5, %3]  : !linalg.view<?x?x?x?x?x?x?xf32>, index, index, index, index, index, !linalg.range, !linalg.range, !linalg.view<?x?xf32>
+                          %25 = linalg.slice %20[%arg3, %arg5, %arg6, %arg7, %arg9, %5, %4]  : !linalg.view<?x?x?x?x?x?x?xf32>, index, index, index, index, index, !linalg.range, !linalg.range, !linalg.view<?x?xf32>
+                          %26 = linalg.slice %17[%arg2, %arg4, %arg8, %arg10, %3, %arg1, %arg5, %arg7, %arg9, %4]  : !linalg.view<?x?x?x?x?x?x?x?x?x?xf32>, index, index, index, index, !linalg.range, index, index, index, index, !linalg.range, !linalg.view<?x?xf32>
+                          linalg.matmul(%24, %25, %26) : !linalg.view<?x?xf32>, !linalg.view<?x?xf32>, !linalg.view<?x?xf32>
+
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    return %cst_0 : f32
+  }
+}
